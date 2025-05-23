@@ -244,6 +244,43 @@ input[type="text"]:focus, input[type="email"]:focus {
     box-shadow: 0 0 8px rgba(99, 179, 237, 0.3);
 }
 
+/* Milestone Animations */
+.milestone-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.visible .milestone-item:nth-child(1) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s;
+}
+
+.section.visible .milestone-item:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.4s;
+}
+
+.section.visible .milestone-item:nth-child(3) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.6s;
+}
+
+.section.visible .milestone-item:nth-child(4) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.8s;
+}
+
+.section.visible .milestone-item:nth-child(5) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1s;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .navbar {
@@ -281,6 +318,14 @@ input[type="text"]:focus, input[type="email"]:focus {
         right: 20px;
         padding: 0.8rem 1rem;
     }
+
+    .timeline {
+        padding-left: 1rem;
+    }
+
+    .timeline-start {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -298,5 +343,13 @@ input[type="text"]:focus, input[type="email"]:focus {
 
     input[type="text"], input[type="email"] {
         padding: 0.5rem;
+    }
+
+    .timeline-start .card {
+        padding: 1rem;
+    }
+
+    .timeline-start h3 {
+        font-size: 1.1rem;
     }
 }

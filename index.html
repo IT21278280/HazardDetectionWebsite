@@ -6,6 +6,8 @@
     <title>Hazard Detection System for Deaf Drivers</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS -->
@@ -101,28 +103,111 @@
     <!-- Milestones Section -->
     <section id="milestones" class="section">
         <h2 class="section-title text-3xl font-bold mb-6">Milestones</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div id="proposal" class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <h3 class="text-xl font-semibold">Project Proposal</h3>
-                <p>Date: September 2024, Marks: 10%</p>
-            </div>
-            <div id="progress1" class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <h3 class="text-xl font-semibold">Progress Presentation-1</h3>
-                <p>Date: November 2024, Marks: 15%</p>
-            </div>
-            <div id="progress2" class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <h3 class="text-xl font-semibold">Progress Presentation-2</h3>
-                <p>Date: January 2025, Marks: 15%</p>
-            </div>
-            <div id="final" class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <h3 class="text-xl font-semibold">Final Assessment</h3>
-                <p>Date: April 2025, Marks: 40%</p>
-            </div>
-            <div id="viva" class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <h3 class="text-xl font-semibold">Viva</h3>
-                <p>Date: April 2025, Marks: 20%</p>
-            </div>
-        </div>
+        <ul class="timeline timeline-vertical timeline-snap-icon">
+            <li class="milestone-item">
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Initial project pitch and planning phase">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-file-alt fa-2x text-blue-400"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Project Proposal</h3>
+                                    <p class="text-gray-300">September 2024</p>
+                                    <span class="badge badge-primary badge-outline">Marks: 10%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-blue-400"></i>
+                </div>
+                <hr class="bg-blue-400"/>
+            </li>
+            <li class="milestone-item">
+                <hr class="bg-blue-400"/>
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="First progress review with initial prototype">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-chart-line fa-2x text-green-400"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Progress Presentation-1</h3>
+                                    <p class="text-gray-300">November 2024</p>
+                                    <span class="badge badge-primary badge-outline">Marks: 15%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-green-400"></i>
+                </div>
+                <hr class="bg-green-400"/>
+            </li>
+            <li class="milestone-item">
+                <hr class="bg-green-400"/>
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Second progress review with system integration">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-project-diagram fa-2x text-purple-400"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Progress Presentation-2</h3>
+                                    <p class="text-gray-300">January 2025</p>
+                                    <span class="badge badge-primary badge-outline">Marks: 15%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-purple-400"></i>
+                </div>
+                <hr class="bg-purple-400"/>
+            </li>
+            <li class="milestone-item">
+                <hr class="bg-purple-400"/>
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Final evaluation of the complete system">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-check-circle fa-2x text-yellow-400"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Final Assessment</h3>
+                                    <p class="text-gray-300">April 2025</p>
+                                    <span class="badge badge-primary badge-outline">Marks: 40%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-yellow-400"></i>
+                </div>
+                <hr class="bg-yellow-400"/>
+            </li>
+            <li class="milestone-item">
+                <hr class="bg-yellow-400"/>
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Oral presentation and defense">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-microphone fa-2x text-red-400"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Viva</h3>
+                                    <p class="text-gray-300">April 2025</p>
+                                    <span class="badge badge-primary badge-outline">Marks: 20%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-red-400"></i>
+                </div>
+            </li>
+        </ul>
     </section>
 
     <!-- Tools and Technologies Section -->
