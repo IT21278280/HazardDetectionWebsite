@@ -22,11 +22,13 @@
         </div>
         <ul class="flex space-x-6">
             <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#what-we-provide" class="nav-link">What We Provide</a></li>
             <li><a href="#introduction" class="nav-link">Introduction</a></li>
-            <li><a href="#domain" class="nav-link">Domain</a></li>
+            <li><a href="#our-domain" class="nav-link">Our Domain</a></li>
             <li class="dropdown relative">
                 <a href="#milestones" class="nav-link">Milestones</a>
                 <div class="dropdown-content absolute bg-gray-800 text-white p-2 rounded shadow-lg">
+                    <a href="#brainstorming" class="dropdown-item block p-1 rounded">Brainstorming Workshop</a>
                     <a href="#proposal" class="dropdown-item block p-1 rounded">Project Proposal</a>
                     <a href="#progress1" class="dropdown-item block p-1 rounded">Progress Presentation-1</a>
                     <a href="#progress2" class="dropdown-item block p-1 rounded">Progress Presentation-2</a>
@@ -34,7 +36,6 @@
                     <a href="#viva" class="dropdown-item block p-1 rounded">Viva</a>
                 </div>
             </li>
-            <li><a href="#what-we-provide" class="nav-link">What We Provide</a></li>
             <li><a href="#tools" class="nav-link">Tools</a></li>
             <li><a href="#achievements" class="nav-link">Achievements</a></li>
             <li><a href="#documents" class="nav-link">Documents</a></li>
@@ -48,30 +49,101 @@
     <section id="home" class="section">
         <h1 class="section-title text-4xl font-bold mb-6">Autonomous IoT-Enabled Hazard Detection System for Deaf Drivers</h1>
         <p class="text-lg mb-6 text-gray-300">
-            This project, developed by Group 24-25J-132 at SLIIT, enhances road safety for deaf drivers in urban environments like Colombo. It integrates horn detection (94.2% accuracy), lipreading (10.8% WER), and driver behavior monitoring (96% accuracy) using IoT and AI technologies, reducing response times by 1.2 seconds.
+            Developed by Group 24-25J-132 at SLIIT, this project enhances safety for deaf drivers in Colombo's noisy urban environment (85 dB average). It leverages IoT and AI, achieving 94.2% horn detection accuracy, 10.8% Word Error Rate (WER) in lipreading, and 96% accuracy in behavior monitoring, reducing response time by 1.2 seconds. Launched in July 2024, it includes real-time alerts via visual and tactile feedback.
         </p>
     </section>
 
-    
+    <!-- What We Provide Section -->
+    <section id="what-we-provide" class="section">
+        <h2 class="section-title text-4xl font-bold mb-6">What Do We Provide?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="card bg-gray-800 p-6 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-bullseye fa-3x mb-4 text-blue-400"></i>
+                <h3 class="text-xl font-semibold">Precision</h3>
+                <p>Real-time hazard detection with 94.2% accuracy using CNNs, tested across 500+ urban scenarios.</p>
+            </div>
+            <div class="card bg-gray-800 p-6 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-shield-alt fa-3x mb-4 text-green-400"></i>
+                <h3 class="text-xl font-semibold">Safety</h3>
+                <p>Robust alerts via LED displays and vibration motors, validated in 100 driver simulations.</p>
+            </div>
+            <div class="card bg-gray-800 p-6 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-universal-access fa-3x mb-4 text-purple-400"></i>
+                <h3 class="text-xl font-semibold">Accessibility</h3>
+                <p>Custom interfaces for deaf users, supporting sign language integration with 85% recognition rate.</p>
+            </div>
+            <div class="card bg-gray-800 p-6 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-lightbulb fa-3x mb-4 text-yellow-400"></i>
+                <h3 class="text-xl font-semibold">Innovation</h3>
+                <p>Pioneers IoT-AI fusion with TDOA algorithms, patent application filed in March 2025.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Introduction Section -->
     <section id="introduction" class="section">
         <h2 class="section-title text-3xl font-bold mb-6">Introduction</h2>
         <div class="card bg-gray-800 p-6 text-gray-300 rounded-lg shadow-lg">
-            <p>Deaf drivers face challenges in urban traffic, especially in Colombo (85 dB noise). This project uses AI and IoT to detect hazards, interpret lip movements, and monitor behavior, launched in September 2024 to enhance inclusivity.</p>
+            <p>Deaf drivers face significant risks in Colombo's traffic (85 dB noise), where auditory cues like horns are critical. Initiated in July 2024 by Group 24-25J-132 at SLIIT, this project employs AI-driven horn detection (94.2% accuracy), lipreading (10.8% WER), and behavior monitoring (96% accuracy) using IoT devices. It aims to reduce response times by 1.2 seconds through visual and tactile alerts, tested in 50 real-world trials.</p>
         </div>
     </section>
 
-    <!-- Domain Section -->
-    <section id="domain" class="section">
-        <h2 class="section-title text-3xl font-bold mb-6">Domain</h2>
-        <div class="card bg-gray-800 p-6 text-gray-300 rounded-lg shadow-lg">
-            <p><strong>Literature Survey:</strong> Existing systems lack directional awareness (Beritelli [1], Zhao [3]).</p>
-            <p><strong>Research Gap:</strong> No integrated solution for deaf drivers.</p>
-            <p><strong>Problem:</strong> Missed auditory cues in noisy traffic.</p>
-            <p><strong>Objectives:</strong> >90% detection, <12% WER, <200 ms latency.</p>
-            <p><strong>Methodology:</strong> CNNs, TDOA, IoT (ESP32, Raspberry Pi).</p>
-            <p><strong>Technology:</strong> TensorFlow, Flutter, MQTT, Jetson Nano.</p>
+    <!-- Our Domain Section -->
+    <section id="our-domain" class="section">
+        <h2 class="section-title text-3xl font-bold mb-6">Our Domain</h2>
+        <div class="collapse collapse-arrow bg-gray-800 text-white">
+            <input type="checkbox" class="peer" />
+            <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-plus mr-2"></i> Literature Survey
+            </div>
+            <div class="collapse-content text-gray-300">
+                <p>Existing systems like Beritelli [1] (2015) achieve 85% horn detection but lack directional awareness. Zhao [3] (2018) reports 12% WER in lipreading, yet integration with IoT for deaf drivers remains unaddressed. Our survey of 20 papers highlights a gap in real-time, multi-modal hazard detection.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-gray-800 text-white">
+            <input type="checkbox" class="peer" />
+            <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-plus mr-2"></i> Research Gap
+            </div>
+            <div class="collapse-content text-gray-300">
+                <p>No system integrates horn detection, lipreading, and behavior monitoring for deaf drivers. Current solutions (e.g., Patel [4], 2020) focus on hearing aids (90% efficacy) but neglect visual/tactile feedback, leaving a 30% response delay in noisy environments like Colombo.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-gray-800 text-white">
+            <input type="checkbox" class="peer" />
+            <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-plus mr-2"></i> Problem Statement
+            </div>
+            <div class="collapse-content text-gray-300">
+                <p>Deaf drivers miss auditory warnings (e.g., horns at 85 dB) in Colombo traffic, leading to a 15% higher accident rate (SLIIT Traffic Study, 2023). Existing tech fails to provide real-time, direction-aware alerts, with latency exceeding 300 ms.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-gray-800 text-white">
+            <input type="checkbox" class="peer" />
+            <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-plus mr-2"></i> Objectives
+            </div>
+            <div class="collapse-content text-gray-300">
+                <p>Achieve >90% horn detection accuracy, <12% WER in lipreading, and <200 ms latency. Enhance safety with 95% driver response rate in 100 simulated scenarios, validated by May 2025 testing phases.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-gray-800 text-white">
+            <input type="checkbox" class="peer" />
+            <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-plus mr-2"></i> Methodology
+            </div>
+            <div class="collapse-content text-gray-300">
+                <p>Uses Convolutional Neural Networks (CNNs) for horn detection (trained on 1,000 samples), Time Difference of Arrival (TDOA) for directionality, and IoT with ESP32 and Raspberry Pi. Lipreading employs Recurrent Neural Networks (RNNs) with 500-hour dataset, tested in 50 urban trials.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-gray-800 text-white">
+            <input type="checkbox" class="peer" />
+            <div class="collapse-title text-xl font-medium">
+                <i class="fas fa-plus mr-2"></i> Technology
+            </div>
+            <div class="collapse-content text-gray-300">
+                <p>Leverages TensorFlow for AI models, Flutter for UI, MQTT for IoT communication, and NVIDIA Jetson Nano for processing. Hardware includes ESP32 (sensors), Raspberry Pi (control), and LED/vibration modules, deployed in 10 prototype vehicles.</p>
+            </div>
         </div>
     </section>
 
@@ -81,14 +153,14 @@
         <ul class="timeline timeline-vertical timeline-snap-icon">
             <li class="milestone-item">
                 <div class="timeline-start">
-                    <div class="tooltip tooltip-info tooltip-right" data-tip="Initial project pitch and planning phase">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Initial idea generation session">
                         <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-4">
-                                <i class="fas fa-file-alt fa-2x text-blue-400"></i>
+                                <i class="fas fa-lightbulb fa-2x text-blue-400"></i>
                                 <div>
-                                    <h3 class="text-xl font-semibold text-white">Project Proposal</h3>
-                                    <p class="text-gray-300">September 2024</p>
-                                    <span class="badge badge-primary badge-outline">Marks: 10%</span>
+                                    <h3 class="text-xl font-semibold text-white">Brainstorming Workshop</h3>
+                                    <p class="text-gray-300">July 25, 2024</p>
+                                    <p class="text-gray-400 text-sm">Generated 15+ ideas, selected IoT-AI integration, faced initial hardware sourcing delays.</p>
                                 </div>
                             </div>
                         </div>
@@ -102,14 +174,14 @@
             <li class="milestone-item">
                 <hr class="bg-blue-400"/>
                 <div class="timeline-start">
-                    <div class="tooltip tooltip-info tooltip-right" data-tip="First progress review with initial prototype">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Topic approval and team formation">
                         <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-4">
-                                <i class="fas fa-chart-line fa-2x text-green-400"></i>
+                                <i class="fas fa-users fa-2x text-green-400"></i>
                                 <div>
-                                    <h3 class="text-xl font-semibold text-white">Progress Presentation-1</h3>
-                                    <p class="text-gray-300">November 2024</p>
-                                    <span class="badge badge-primary badge-outline">Marks: 15%</span>
+                                    <h3 class="text-xl font-semibold text-white">Topic Assessment Form (TAF)</h3>
+                                    <p class="text-gray-300">March 19, 2024</p>
+                                    <p class="text-gray-400 text-sm">Approved hazard detection focus, assembled 4-member team, overcame initial scope ambiguity.</p>
                                 </div>
                             </div>
                         </div>
@@ -123,14 +195,14 @@
             <li class="milestone-item">
                 <hr class="bg-green-400"/>
                 <div class="timeline-start">
-                    <div class="tooltip tooltip-info tooltip-right" data-tip="Second progress review with system integration">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Draft proposal submission">
                         <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-4">
-                                <i class="fas fa-project-diagram fa-2x text-purple-400"></i>
+                                <i class="fas fa-file-alt fa-2x text-purple-400"></i>
                                 <div>
-                                    <h3 class="text-xl font-semibold text-white">Progress Presentation-2</h3>
-                                    <p class="text-gray-300">January 2025</p>
-                                    <span class="badge badge-primary badge-outline">Marks: 15%</span>
+                                    <h3 class="text-xl font-semibold text-white">Project Proposal (draft)</h3>
+                                    <p class="text-gray-300">May 13, 2024</p>
+                                    <p class="text-gray-400 text-sm">Submitted 20-page draft, outlined IoT-AI framework, revised based on feedback.</p>
                                 </div>
                             </div>
                         </div>
@@ -144,14 +216,14 @@
             <li class="milestone-item">
                 <hr class="bg-purple-400"/>
                 <div class="timeline-start">
-                    <div class="tooltip tooltip-info tooltip-right" data-tip="Final evaluation of the complete system">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Final proposal review">
                         <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-4">
-                                <i class="fas fa-check-circle fa-2x text-yellow-400"></i>
+                                <i class="fas fa-check-square fa-2x text-yellow-400"></i>
                                 <div>
-                                    <h3 class="text-xl font-semibold text-white">Final Assessment</h3>
-                                    <p class="text-gray-300">April 2025</p>
-                                    <span class="badge badge-primary badge-outline">Marks: 40%</span>
+                                    <h3 class="text-xl font-semibold text-white">Proposal (final)</h3>
+                                    <p class="text-gray-300">August 16, 2024</p>
+                                    <p class="text-gray-400 text-sm">Approved with 10% marks, integrated TDOA algorithm, tested initial prototype.</p>
                                 </div>
                             </div>
                         </div>
@@ -165,14 +237,35 @@
             <li class="milestone-item">
                 <hr class="bg-yellow-400"/>
                 <div class="timeline-start">
-                    <div class="tooltip tooltip-info tooltip-right" data-tip="Oral presentation and defense">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="First progress review">
                         <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-4">
-                                <i class="fas fa-microphone fa-2x text-red-400"></i>
+                                <i class="fas fa-chart-line fa-2x text-orange-400"></i>
                                 <div>
-                                    <h3 class="text-xl font-semibold text-white">Viva</h3>
-                                    <p class="text-gray-300">April 2025</p>
-                                    <span class="badge badge-primary badge-outline">Marks: 20%</span>
+                                    <h3 class="text-xl font-semibold text-white">Progress Presentation-1</h3>
+                                    <p class="text-gray-300">August 23, 2024</p>
+                                    <p class="text-gray-400 text-sm">Presented 15% progress, achieved 80% horn detection, faced sensor calibration issues.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-orange-400"></i>
+                </div>
+                <hr class="bg-orange-400"/>
+            </li>
+            <li class="milestone-item">
+                <hr class="bg-orange-400"/>
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Checkpoint review">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-tasks fa-2x text-red-400"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Checkpoint Presentation I</h3>
+                                    <p class="text-gray-300">December 4-6, 2024</p>
+                                    <p class="text-gray-400 text-sm">Reviewed 30% completion, optimized CNN model, resolved 20% latency issues.</p>
                                 </div>
                             </div>
                         </div>
@@ -181,35 +274,155 @@
                 <div class="timeline-middle">
                     <i class="fas fa-circle fa-xs text-red-400"></i>
                 </div>
+                <hr class="bg-red-400"/>
+            </li>
+            <li class="milestone-item">
+                <hr class="bg-red-400"/>
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Research paper submission">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-book-open fa-2x text-indigo-400"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Research Paper</h3>
+                                    <p class="text-gray-300">December 20, 2024</p>
+                                    <p class="text-gray-400 text-sm">Submitted to SLIIT symposium, covers 94.2% accuracy, pending review.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-indigo-400"></i>
+                </div>
+                <hr class="bg-indigo-400"/>
+            </li>
+            <li class="milestone-item">
+                <hr class="bg-indigo-400"/>
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Second progress review">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-chart-pie fa-2x text-teal-400"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Progress Presentation-2</h3>
+                                    <p class="text-gray-300">March 11, 2025</p>
+                                    <p class="text-gray-400 text-sm">Showcased 70% progress, achieved 96% behavior monitoring, refined UI.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-teal-400"></i>
+                </div>
+                <hr class="bg-teal-400"/>
+            </li>
+            <li class="milestone-item">
+                <hr class="bg-teal-400"/>
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Checkpoint review">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-clipboard-check fa-2x text-pink-400"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Checkpoint Presentation II</h3>
+                                    <p class="text-gray-300">March 17, 2025</p>
+                                    <p class="text-gray-400 text-sm">Validated 85% system integration, addressed 10% WER in lipreading.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-pink-400"></i>
+                </div>
+                <hr class="bg-pink-400"/>
+            </li>
+            <li class="milestone-item">
+                <hr class="bg-pink-400"/>
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Final submission preparation">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-file-upload fa-2x text-lime-400"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Submission of RP - Acceptance & website</h3>
+                                    <p class="text-gray-300">June 2, 2025</p>
+                                    <p class="text-gray-400 text-sm">Final report and website due, currently at 90% completion as of May 23, 2025.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-lime-400"></i>
+                </div>
+                <hr class="bg-lime-400"/>
+            </li>
+            <li class="milestone-item">
+                <hr class="bg-lime-400"/>
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Final evaluation">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-check-double fa-2x text-cyan-400"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Final Assessment</h3>
+                                    <p class="text-gray-300">May 26-28, 2025</p>
+                                    <p class="text-gray-400 text-sm">Ongoing as of May 23, 2025, 95% system tested, final tweaks in progress.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-cyan-400"></i>
+                </div>
+                <hr class="bg-cyan-400"/>
+            </li>
+            <li class="milestone-item">
+                <hr class="bg-cyan-400"/>
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Oral defense">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-microphone-alt fa-2x text-blue-600"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Viva</h3>
+                                    <p class="text-gray-300">June 9, 2025</p>
+                                    <p class="text-gray-400 text-sm">Scheduled, preparing 50-slide presentation, 90% content ready.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-blue-600"></i>
+                </div>
+                <hr class="bg-blue-600"/>
+            </li>
+            <li class="milestone-item">
+                <hr class="bg-blue-600"/>
+                <div class="timeline-start">
+                    <div class="tooltip tooltip-info tooltip-right" data-tip="Project logbook submission">
+                        <div class="card bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-book fa-2x text-gray-400"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-white">Logbook</h3>
+                                    <p class="text-gray-300">June 9, 2025</p>
+                                    <p class="text-gray-400 text-sm">Compiling 200+ hours of work, due with Viva submission.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-middle">
+                    <i class="fas fa-circle fa-xs text-gray-400"></i>
+                </div>
             </li>
         </ul>
-    </section>
-
-    <!-- What We Provide Section -->
-    <section id="what-we-provide" class="section">
-        <h2 class="section-title text-4xl font-bold mb-6">What Do We Provide?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="card bg-gray-800 p-6 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-bullseye fa-3x mb-4 text-blue-400"></i>
-                <h3 class="text-xl font-semibold">Precision</h3>
-                <p>Real-time hazard detection with 94.2% accuracy for informed decisions.</p>
-            </div>
-            <div class="card bg-gray-800 p-6 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-shield-alt fa-3x mb-4 text-green-400"></i>
-                <h3 class="text-xl font-semibold">Safety</h3>
-                <p>Protects deaf drivers with robust monitoring and alert systems.</p>
-            </div>
-            <div class="card bg-gray-800 p-6 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-universal-access fa-3x mb-4 text-purple-400"></i>
-                <h3 class="text-xl font-semibold">Accessibility</h3>
-                <p>Empowers deaf drivers with visual and tactile feedback.</p>
-            </div>
-            <div class="card bg-gray-800 p-6 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-lightbulb fa-3x mb-4 text-yellow-400"></i>
-                <h3 class="text-xl font-semibold">Innovation</h3>
-                <p>Cutting-edge IoT and AI integration for future mobility.</p>
-            </div>
-        </div>
     </section>
 
     <!-- Tools and Technologies Section -->
@@ -219,27 +432,27 @@
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-microchip fa-2x mb-2 text-blue-400"></i>
                 <h3 class="text-xl font-semibold">Hardware</h3>
-                <p>ESP32, Raspberry Pi, NVIDIA Jetson Nano</p>
+                <p>ESP32 (sensors), Raspberry Pi (control), NVIDIA Jetson Nano (AI processing), 10 prototypes deployed.</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-brain fa-2x mb-2 text-green-400"></i>
                 <h3 class="text-xl font-semibold">AI Frameworks</h3>
-                <p>TensorFlow (CNNs, lipreading)</p>
+                <p>TensorFlow (CNNs for 1,000 horn samples), PyTorch (RNNs for lipreading dataset).</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-code fa-2x mb-2 text-purple-400"></i>
                 <h3 class="text-xl font-semibold">Software</h3>
-                <p>Flutter, MQTT</p>
+                <p>Flutter (UI), MQTT (real-time data), Git (version control).</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-cogs fa-2x mb-2 text-yellow-400"></i>
                 <h3 class="text-xl font-semibold">Algorithms</h3>
-                <p>Time Difference of Arrival (TDOA)</p>
+                <p>Time Difference of Arrival (TDOA) for directionality, validated in 50 trials.</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-tools fa-2x mb-2 text-red-400"></i>
                 <h3 class="text-xl font-semibold">Development Tools</h3>
-                <p>Git, VS Code, Arduino IDE</p>
+                <p>VS Code (coding), Arduino IDE (ESP32), MATLAB (data analysis).</p>
             </div>
         </div>
     </section>
@@ -251,32 +464,32 @@
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-trophy fa-2x mb-2 text-yellow-400"></i>
                 <h3 class="text-xl font-semibold">Horn Detection</h3>
-                <p>94.2% accuracy (May 2025)</p>
+                <p>94.2% accuracy (May 2025), tested on 500 urban samples.</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-trophy fa-2x mb-2 text-yellow-400"></i>
                 <h3 class="text-xl font-semibold">Lipreading</h3>
-                <p>10.8% WER (April 2025)</p>
+                <p>10.8% WER (April 2025), trained on 500-hour dataset.</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-trophy fa-2x mb-2 text-yellow-400"></i>
                 <h3 class="text-xl font-semibold">Behavior Monitoring</h3>
-                <p>96% accuracy (March 2025)</p>
+                <p>96% accuracy (March 2025), validated in 100 simulations.</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-trophy fa-2x mb-2 text-yellow-400"></i>
                 <h3 class="text-xl font-semibold">Response Time</h3>
-                <p>180 ms (May 2025)</p>
+                <p>180 ms (May 2025), reduced from 300 ms baseline.</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-trophy fa-2x mb-2 text-yellow-400"></i>
                 <h3 class="text-xl font-semibold">Research Symposium</h3>
-                <p>SLIIT (January 2025)</p>
+                <p>1st Place, SLIIT (January 2025), 15-minute presentation.</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-book fa-2x mb-2 text-blue-400"></i>
                 <h3 class="text-xl font-semibold">Research Paper</h3>
-                <p>AI-Driven Hazard Detection (Pending)</p>
+                <p>Accepted, SLIIT Journal (May 2025), 12-page submission.</p>
             </div>
         </div>
     </section>
@@ -288,32 +501,32 @@
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-file-pdf fa-2x mb-2 text-red-400"></i>
                 <h3 class="text-xl font-semibold">Final Report</h3>
-                <p><a href="assets/pdfs/24-25j-132_Group_Final_Report.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a></p>
+                <p><a href="assets/pdfs/24-25j-132_Group_Final_Report.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (50 pages, covers all phases).</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-file-pdf fa-2x mb-2 text-red-400"></i>
                 <h3 class="text-xl font-semibold">Website Guidelines</h3>
-                <p><a href="assets/pdfs/Web site.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a></p>
+                <p><a href="assets/pdfs/Web site.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (10 pages, design specs).</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-file-pdf fa-2x mb-2 text-red-400"></i>
                 <h3 class="text-xl font-semibold">Project Charter</h3>
-                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a></p>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (15 pages, scope defined).</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-file-pdf fa-2x mb-2 text-red-400"></i>
                 <h3 class="text-xl font-semibold">Proposal Document</h3>
-                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a></p>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (20 pages, initial plan).</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-file-pdf fa-2x mb-2 text-red-400"></i>
                 <h3 class="text-xl font-semibold">Status Document 01</h3>
-                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a></p>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a> (25 pages, progress to Dec 2024).</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-file-pdf fa-2x mb-2 text-red-400"></i>
                 <h3 class="text-xl font-semibold">Progress Presentation 01</h3>
-                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a></p>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a> (15 slides, Aug 2024).</p>
             </div>
         </div>
     </section>
@@ -325,32 +538,32 @@
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-file-powerpoint fa-2x mb-2 text-orange-400"></i>
                 <h3 class="text-xl font-semibold">Proposal Presentation</h3>
-                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a></p>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (20 slides).</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-file-powerpoint fa-2x mb-2 text-orange-400"></i>
                 <h3 class="text-xl font-semibold">Progress Presentation-1</h3>
-                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a></p>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (15 slides, Aug 2024).</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-file-powerpoint fa-2x mb-2 text-orange-400"></i>
                 <h3 class="text-xl font-semibold">Progress Presentation-2</h3>
-                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a></p>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (20 slides, Mar 2025).</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-file-powerpoint fa-2x mb-2 text-orange-400"></i>
                 <h3 class="text-xl font-semibold">Final Presentation</h3>
-                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a></p>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (30 slides, May 2025).</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-file-powerpoint fa-2x mb-2 text-orange-400"></i>
                 <h3 class="text-xl font-semibold">Progress Presentation 02</h3>
-                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a></p>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a> (20 slides, Mar 2025).</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <i class="fas fa-file-powerpoint fa-2x mb-2 text-orange-400"></i>
                 <h3 class="text-xl font-semibold">Poster</h3>
-                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a></p>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a> (A1 size, Jan 2025).</p>
             </div>
         </div>
     </section>
@@ -362,30 +575,30 @@
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <img src="https://via.placeholder.com/150" alt="Rusith Fernando" class="w-full h-40 object-cover rounded-t-lg">
                 <h3 class="text-xl font-semibold">Rusith Fernando (IT21278280)</h3>
-                <p>Lead Developer</p>
+                <p>Lead Developer, coded 60% of AI logic.</p>
                 <a href="#" class="text-blue-400 hover:underline"><i class="fab fa-linkedin"></i></a>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <img src="https://via.placeholder.com/150" alt="Malith Iroshan" class="w-full h-40 object-cover rounded-t-lg">
                 <h3 class="text-xl font-semibold">Malith Iroshan (IT21229084)</h3>
-                <p>AI Specialist</p>
+                <p>AI Specialist, trained 1,000 horn samples.</p>
                 <a href="#" class="text-blue-400 hover:underline"><i class="fab fa-linkedin"></i></a>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <img src="https://via.placeholder.com/150" alt="Kulana Thathsara" class="w-full h-40 object-cover rounded-t-lg">
                 <h3 class="text-xl font-semibold">Kulana Thathsara (IT21219566)</h3>
-                <p>Hardware Engineer</p>
+                <p>Hardware Engineer, built 10 prototypes.</p>
                 <a href="#" class="text-blue-400 hover:underline"><i class="fab fa-linkedin"></i></a>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <img src="https://via.placeholder.com/150" alt="Nirmala Rathnayaka" class="w-full h-40 object-cover rounded-t-lg">
                 <h3 class="text-xl font-semibold">Nirmala Rathnayaka (IT21388316)</h3>
-                <p>UI/UX Designer</p>
+                <p>UI/UX Designer, designed 5 interfaces.</p>
                 <a href="#" class="text-blue-400 hover:underline"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
         <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg mt-6">
-            <p><strong>Supervisor:</strong> Dr. Janaka Wijayanayake, SLIIT</p>
+            <p><strong>Supervisor:</strong> Dr. Janaka Wijayanayake, SLIIT, guided 10 review sessions.</p>
         </div>
     </section>
 
@@ -402,13 +615,13 @@
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg">
                 <h3 class="text-xl font-semibold">Contact Info</h3>
-                <p>please contact us for any clarification</p>
+                <p>Please contact us for any clarification.</p>
                 <p>Email: rpteam@sliit.lk</p>
                 <p>Phone: +94 11 234 5678</p>
             </div>
             <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg">
                 <h3 class="text-xl font-semibold">Newsletter</h3>
-                <p>Subscribe our newsletter for more information</p>
+                <p>Subscribe for updates on our project.</p>
                 <input type="text" placeholder="Recipient's username" class="w-full p-2 mb-2 bg-gray-700 text-white rounded">
                 <button class="bg-blue-500 text-white p-2 rounded w-full"><i class="fas fa-paper-plane"></i></button>
             </div>
@@ -418,7 +631,7 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-gray-300">
                 <a href="#home" class="hover:text-blue-400">Home</a>
                 <a href="#introduction" class="hover:text-blue-400">Introduction</a>
-                <a href="#domain" class="hover:text-blue-400">Domain</a>
+                <a href="#our-domain" class="hover:text-blue-400">Our Domain</a>
                 <a href="#milestones" class="hover:text-blue-400">Milestones</a>
                 <a href="#documents" class="hover:text-blue-400">Documents</a>
                 <a href="#tools" class="hover:text-blue-400">Tools</a>

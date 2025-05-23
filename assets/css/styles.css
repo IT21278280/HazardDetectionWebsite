@@ -244,7 +244,7 @@ input[type="text"]:focus, input[type="email"]:focus {
     box-shadow: 0 0 8px rgba(99, 179, 237, 0.3);
 }
 
-/* Milestone Animations */
+/* Milestone and Accordion Animations */
 .milestone-item {
     opacity: 0;
     transform: translateX(-20px);
@@ -279,6 +279,63 @@ input[type="text"]:focus, input[type="email"]:focus {
     opacity: 1;
     transform: translateX(0);
     transition-delay: 1s;
+}
+
+.section.visible .milestone-item:nth-child(6) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1.2s;
+}
+
+.section.visible .milestone-item:nth-child(7) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1.4s;
+}
+
+.section.visible .milestone-item:nth-child(8) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1.6s;
+}
+
+.section.visible .milestone-item:nth-child(9) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1.8s;
+}
+
+.section.visible .milestone-item:nth-child(10) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 2s;
+}
+
+.section.visible .milestone-item:nth-child(11) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 2.2s;
+}
+
+.section.visible .milestone-item:nth-child(12) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 2.4s;
+}
+
+.section.visible .milestone-item:nth-child(13) {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 2.6s;
+}
+
+/* Accordion Icon Transition */
+.collapse-title .fas {
+    transition: transform 0.3s ease;
+}
+
+.collapse[open] .collapse-title .fas {
+    transform: rotate(45deg);
 }
 
 /* Responsive Adjustments */
@@ -326,6 +383,10 @@ input[type="text"]:focus, input[type="email"]:focus {
     .timeline-start {
         width: 100%;
     }
+
+    .collapse-title {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -351,5 +412,9 @@ input[type="text"]:focus, input[type="email"]:focus {
 
     .timeline-start h3 {
         font-size: 1.1rem;
+    }
+
+    .collapse-title {
+        font-size: 1rem;
     }
 }
