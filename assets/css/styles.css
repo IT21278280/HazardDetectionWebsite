@@ -7,6 +7,7 @@ body {
     padding: 0;
     line-height: 1.6;
     letter-spacing: 0.02em;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .navbar {
@@ -14,8 +15,8 @@ body {
     top: 0;
     z-index: 1000;
     background: linear-gradient(90deg, #2d3748 0%, #1a202c 100%);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    padding: 0.5rem 1rem;
     transition: background 0.5s ease;
 }
 
@@ -23,7 +24,7 @@ body {
     color: #e2e8f0;
     font-weight: 600;
     position: relative;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     transition: color 0.3s ease;
 }
 
@@ -47,16 +48,16 @@ body {
 }
 
 .section {
-    padding: 4rem 2rem;
-    min-height: 80vh;
-    scroll-margin-top: 80px;
+    padding: 1rem 0.5rem;
+    min-height: 60vh;
+    scroll-margin-top: 60px;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     position: relative;
     background: linear-gradient(45deg, rgba(29, 36, 48, 0.2), rgba(45, 55, 72, 0.2));
-    border-radius: 15px;
-    margin: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem;
 }
 
 .section.visible {
@@ -67,22 +68,21 @@ body {
 .section-title {
     color: #f7fafc;
     text-align: center;
-    margin-bottom: 2.5rem;
-    position: relative;
-    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    width: 60px;
-    height: 4px;
+    width: 40px;
+    height: 3px;
     background: linear-gradient(90deg, #63b3ed, #4c51bf);
-    bottom: -15px;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 2px;
@@ -90,13 +90,13 @@ body {
 
 .card {
     background: linear-gradient(145deg, #2d3748, #1a202c);
-    border-radius: 12px;
-    padding: 2rem;
+    border-radius: 8px;
+    padding: 0.5rem;
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
     border: 1px solid transparent;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card::before {
@@ -116,19 +116,20 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
-    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-4px) scale(1.02);
     border-color: #63b3ed;
 }
 
 .dropdown-content {
     display: none;
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     background: #2d3748;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    min-width: 120px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -141,6 +142,7 @@ body {
     transition: background-color 0.3s ease, padding-left 0.3s ease;
     opacity: 0;
     animation: fadeIn 0.5s forwards;
+    padding: 0.25rem 0.5rem;
 }
 
 @keyframes fadeIn {
@@ -157,34 +159,35 @@ body {
 
 .dropdown-item:hover {
     background-color: #4a5568;
-    padding-left: 1rem;
+    padding-left: 0.75rem;
 }
 
 .back-to-top {
     position: fixed;
-    bottom: 40px;
-    right: 40px;
+    bottom: 10px;
+    right: 10px;
     background: linear-gradient(45deg, #2d3748, #4a5568);
     color: #e2e8f0;
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 50%;
     display: none;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    font-size: 1.2rem;
-    border: 2px solid transparent;
+    font-size: 1rem;
+    border: 1px solid transparent;
 }
 
 .back-to-top:hover {
     background: linear-gradient(45deg, #63b3ed, #4c51bf);
-    box-shadow: 0 0 15px rgba(99, 179, 237, 0.5);
+    box-shadow: 0 0 10px rgba(99, 179, 237, 0.5);
     border-color: #63b3ed;
     transform: scale(1.1);
 }
 
 .logo {
-    height: 50px;
+    height: 8vw;
+    max-height: 40px;
     transition: transform 0.5s ease, filter 0.3s ease;
 }
 
@@ -195,15 +198,15 @@ body {
 
 .footer {
     background: linear-gradient(90deg, #2d3748 0%, #1a202c 100%);
-    padding: 2rem;
+    padding: 0.5rem;
     text-align: center;
     border-top: 1px solid #4a5568;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .footer p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     color: #a0aec0;
     transition: color 0.3s ease;
 }
@@ -216,8 +219,8 @@ body {
 button, input[type="button"], input[type="submit"] {
     background: linear-gradient(90deg, #63b3ed, #4c51bf);
     border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
     color: #fff;
     font-weight: 600;
     cursor: pointer;
@@ -226,22 +229,23 @@ button, input[type="button"], input[type="submit"] {
 
 button:hover, input[type="button"]:hover, input[type="submit"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(99, 179, 237, 0.4);
+    box-shadow: 0 2px 8px rgba(99, 179, 237, 0.4);
 }
 
 input[type="text"], input[type="email"] {
     background-color: #2d3748;
     border: 1px solid #4a5568;
-    padding: 0.75rem;
-    border-radius: 8px;
+    padding: 0.5rem;
+    border-radius: 6px;
     color: #e2e8f0;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
 }
 
 input[type="text"]:focus, input[type="email"]:focus {
     outline: none;
     border-color: #63b3ed;
-    box-shadow: 0 0 8px rgba(99, 179, 237, 0.3);
+    box-shadow: 0 0 6px rgba(99, 179, 237, 0.3);
 }
 
 /* Milestone and Accordion Animations */
@@ -338,83 +342,254 @@ input[type="text"]:focus, input[type="email"]:focus {
     transform: rotate(45deg);
 }
 
+/* Timeline Fixes and Styling */
+.timeline {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+}
+
+.timeline-start {
+    padding-right: 1rem;
+    text-align: left;
+}
+
+.timeline-middle {
+    margin: 0 0.5rem;
+}
+
+.timeline hr {
+    margin: 0;
+    border: 0;
+    height: 2px;
+}
+
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .navbar ul {
         flex-direction: column;
         width: 100%;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
     }
 
     .nav-link {
-        padding: 0.5rem 0;
-        display: block;
+        padding: 0.25rem 0;
+        font-size: 0.875rem;
     }
 
     .section {
-        padding: 2rem 1rem;
+        padding: 0.5rem;
+        margin: 0.25rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .section-title::after {
+        width: 30px;
+        height: 2px;
+        bottom: -5px;
+    }
+
+    .card {
+        padding: 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.625rem;
+    }
+
+    .timeline-start {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .timeline-start .card {
+        padding: 0.5rem;
+    }
+
+    .timeline-start h3 {
+        font-size: 0.875rem;
+    }
+
+    .timeline-start p {
+        font-size: 0.625rem;
+    }
+
+    .collapse-title {
+        font-size: 0.875rem;
+        padding: 0.25rem;
+    }
+
+    .collapse-content {
+        padding: 0.25rem;
+    }
+
+    .back-to-top {
+        bottom: 5px;
+        right: 5px;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    button, input[type="button"], input[type="submit"] {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    input[type="text"], input[type="email"] {
+        padding: 0.25rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .navbar {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .navbar ul {
+        margin-top: 0.75rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    .section {
+        padding: 1rem;
         margin: 0.5rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .section-title::after {
+        width: 50px;
+        height: 3px;
     }
 
     .card {
+        padding: 0.75rem;
+    }
+
+    .card h3 {
+        font-size: 1.25rem;
+    }
+
+    .card p {
+        font-size: 0.875rem;
+    }
+
+    .timeline-start {
+        width: 60%;
+    }
+
+    .collapse-title {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .collapse-content {
+        padding: 0.5rem;
+    }
+
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    button, input[type="button"], input[type="submit"] {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    input[type="text"], input[type="email"] {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar {
+        padding: 1.5rem 2rem;
+    }
+
+    .nav-link {
+        font-size: 1.125rem;
+    }
+
+    .section {
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-title::after {
+        width: 60px;
+        height: 4px;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    .timeline-start {
+        width: 50%;
+    }
+
+    .collapse-title {
+        font-size: 1.25rem;
+        padding: 1rem;
+    }
+
+    .collapse-content {
         padding: 1rem;
     }
 
     .back-to-top {
         bottom: 20px;
         right: 20px;
-        padding: 0.8rem 1rem;
-    }
-
-    .timeline {
-        padding-left: 1rem;
-    }
-
-    .timeline-start {
-        width: 100%;
-    }
-
-    .collapse-title {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .card {
-        padding: 0.8rem;
+        padding: 1rem 1.5rem;
+        font-size: 1.2rem;
     }
 
     button, input[type="button"], input[type="submit"] {
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
     }
 
     input[type="text"], input[type="email"] {
-        padding: 0.5rem;
-    }
-
-    .timeline-start .card {
-        padding: 1rem;
-    }
-
-    .timeline-start h3 {
-        font-size: 1.1rem;
-    }
-
-    .collapse-title {
+        padding: 0.75rem;
         font-size: 1rem;
     }
 }
