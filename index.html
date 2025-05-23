@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,87 +9,8 @@
     <title>Hazard Detection System for Deaf Drivers</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            scroll-behavior: smooth;
-            background: linear-gradient(to bottom, #e0f7fa, #ffffff);
-        }
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .nav-link {
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-        .nav-link:hover {
-            color: #bfdbfe;
-            transform: scale(1.1);
-        }
-        .section {
-            padding: 3rem 1.5rem;
-            min-height: 100vh;
-            scroll-margin-top: 80px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            margin: 1rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .section.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        .dropdown-content {
-            display: none;
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .dropdown-item {
-            transition: background-color 0.3s ease;
-        }
-        .dropdown-item:hover {
-            background-color: #1e40af;
-        }
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #1e3a8a;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 50%;
-            display: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .back-to-top:hover {
-            background-color: #3b82f6;
-            transform: scale(1.1);
-        }
-        .logo {
-            height: 40px;
-            transition: transform 0.3s ease;
-        }
-        .logo:hover {
-            transform: rotate(360deg);
-        }
-        footer {
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -119,161 +43,148 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="section">
-        <h1 class="text-4xl font-bold mb-4 text-center text-blue-900">Autonomous IoT-Enabled Hazard Detection System for Deaf Drivers</h1>
+    <section id="home" class="section home-section">
+        <h1 class="section-title text-4xl font-bold mb-4 text-center text-blue-900">Autonomous IoT-Enabled Hazard Detection System for Deaf Drivers</h1>
         <p class="text-lg mb-4 text-center text-gray-700">
             This project, developed by Group 24-25J-132 at SLIIT, introduces a system to enhance road safety for deaf drivers in urban environments like Colombo. It integrates horn detection (94.2% accuracy), lipreading (10.8% WER), and driver behavior monitoring (96% accuracy) using IoT and AI technologies. Our solution reduces response times by 1.2 seconds, empowering deaf drivers with safer, independent mobility.
         </p>
     </section>
 
     <!-- Introduction Section -->
-    <section id="introduction" class="section">
-        <h2 class="text-3xl font-bold mb-4 text-blue-800">Introduction</h2>
+    <section id="introduction" class="section intro-section">
+        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Introduction</h2>
         <p class="mb-2 text-gray-700">Deaf drivers face significant challenges in urban traffic, where auditory cues like car horns are critical for safety. In Colombo, with traffic noise levels averaging 85 dB, traditional assistive technologies fall short due to their inability to provide real-time, directional alerts. This project addresses this gap by developing an autonomous IoT-enabled system that uses advanced AI to detect hazards, interpret lip movements, and monitor driver behavior, tailored specifically for the deaf community.</p>
         <p class="mb-2 text-gray-700">Launched in September 2024, the project aims to bridge accessibility gaps in transportation, aligning with global inclusivity goals. By leveraging cutting-edge technology, we seek to reduce accident risks and enhance the quality of life for deaf individuals in Sri Lanka.</p>
     </section>
 
     <!-- Domain Section -->
-    <section id="domain" class="section">
-        <h2 class="text-3xl font-bold mb-4 text-blue-800">Domain</h2>
-        <p class="mb-2 text-gray-700"><strong>Literature Survey:</strong> Existing assistive technologies for deaf drivers lack directional awareness and noise robustness (Beritelli [1], Zhao [3]). Lipreading systems struggle in automotive settings (LipNet [6]).</p>
-        <p class="mb-2 text-gray-700"><strong>Research Gap:</strong> No integrated system combines horn detection, lipreading, and behavior monitoring for deaf drivers.</p>
-        <p class="mb-2 text-gray-700"><strong>Research Problem:</strong> Deaf drivers face heightened risks in Colombo’s noisy traffic (85 dB) due to missed auditory cues.</p>
-        <p class="mb-2 text-gray-700"><strong>Objectives:</strong> Achieve >90% horn detection accuracy, <12% WER for lipreading, and <200 ms latency.</p>
-        <p class="mb-2 text-gray-700"><strong>Methodology:</strong> Uses CNNs, TDOA, and IoT (ESP32, Raspberry Pi) for real-time processing.</p>
-        <p class="text-gray-700"><strong>Technology:</strong> TensorFlow, Flutter, MQTT, NVIDIA Jetson Nano.</p>
+    <section id="domain" class="section domain-section">
+        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Domain</h2>
+        <div class="domain-card p-4">
+            <p class="mb-2 text-gray-700"><strong>Literature Survey:</strong> Existing assistive technologies for deaf drivers lack directional awareness and noise robustness (Beritelli [1], Zhao [3]). Lipreading systems struggle in automotive settings (LipNet [6]).</p>
+            <p class="mb-2 text-gray-700"><strong>Research Gap:</strong> No integrated system combines horn detection, lipreading, and behavior monitoring for deaf drivers.</p>
+            <p class="mb-2 text-gray-700"><strong>Research Problem:</strong> Deaf drivers face heightened risks in Colombo’s noisy traffic (85 dB) due to missed auditory cues.</p>
+            <p class="mb-2 text-gray-700"><strong>Objectives:</strong> Achieve >90% horn detection accuracy, <12% WER for lipreading, and <200 ms latency.</p>
+            <p class="mb-2 text-gray-700"><strong>Methodology:</strong> Uses CNNs, TDOA, and IoT (ESP32, Raspberry Pi) for real-time processing.</p>
+            <p class="text-gray-700"><strong>Technology:</strong> TensorFlow, Flutter, MQTT, NVIDIA Jetson Nano.</p>
+        </div>
     </section>
 
     <!-- Milestones Section -->
-    <section id="milestones" class="section">
-        <h2 class="text-3xl font-bold mb-4 text-blue-800">Milestones</h2>
-        <div id="proposal" class="mb-4">
-            <h3 class="text-2xl font-semibold text-blue-700">Project Proposal</h3>
-            <p class="text-gray-700">Date: September 2024, Marks: 10%</p>
-        </div>
-        <div id="progress1" class="mb-4">
-            <h3 class="text-2xl font-semibold text-blue-700">Progress Presentation-1</h3>
-            <p class="text-gray-700">Date: November 2024, Marks: 15%</p>
-        </div>
-        <div id="progress2" class="mb-4">
-            <h3 class="text-2xl font-semibold text-blue-700">Progress Presentation-2</h3>
-            <p class="text-gray-700">Date: January 2025, Marks: 15%</p>
-        </div>
-        <div id="final" class="mb-4">
-            <h3 class="text-2xl font-semibold text-blue-700">Final Assessment</h3>
-            <p class="text-gray-700">Date: April 2025, Marks: 40%</p>
-        </div>
-        <div id="viva" class="mb-4">
-            <h3 class="text-2xl font-semibold text-blue-700">Viva</h3>
-            <p class="text-gray-700">Date: April 2025, Marks: 20%</p>
+    <section id="milestones" class="section milestones-section">
+        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Milestones</h2>
+        <div class="milestone-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div id="proposal" class="milestone-card">
+                <h3 class="text-2xl font-semibold text-blue-700">Project Proposal</h3>
+                <p class="text-gray-700">Date: September 2024, Marks: 10%</p>
+            </div>
+            <div id="progress1" class="milestone-card">
+                <h3 class="text-2xl font-semibold text-blue-700">Progress Presentation-1</h3>
+                <p class="text-gray-700">Date: November 2024, Marks: 15%</p>
+            </div>
+            <div id="progress2" class="milestone-card">
+                <h3 class="text-2xl font-semibold text-blue-700">Progress Presentation-2</h3>
+                <p class="text-gray-700">Date: January 2025, Marks: 15%</p>
+            </div>
+            <div id="final" class="milestone-card">
+                <h3 class="text-2xl font-semibold text-blue-700">Final Assessment</h3>
+                <p class="text-gray-700">Date: April 2025, Marks: 40%</p>
+            </div>
+            <div id="viva" class="milestone-card">
+                <h3 class="text-2xl font-semibold text-blue-700">Viva</h3>
+                <p class="text-gray-700">Date: April 2025, Marks: 20%</p>
+            </div>
         </div>
     </section>
 
     <!-- Tools and Technologies Section -->
-    <section id="tools" class="section">
-        <h2 class="text-3xl font-bold mb-4 text-blue-800">Tools and Technologies</h2>
-        <ul class="list-disc pl-6 mb-4 text-gray-700">
-            <li><strong>Hardware:</strong> ESP32, Raspberry Pi, NVIDIA Jetson Nano</li>
-            <li><strong>AI Frameworks:</strong> TensorFlow (for CNNs and lipreading models)</li>
-            <li><strong>Software:</strong> Flutter (UI development), MQTT (IoT communication)</li>
-            <li><strong>Algorithms:</strong> Time Difference of Arrival (TDOA) for sound localization</li>
-            <li><strong>Development Tools:</strong> Git, VS Code, Arduino IDE</li>
+    <section id="tools" class="section tools-section">
+        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Tools and Technologies</h2>
+        <ul class="list-none pl-0 mb-4">
+            <li class="tool-item"><strong>Hardware:</strong> ESP32, Raspberry Pi, NVIDIA Jetson Nano</li>
+            <li class="tool-item"><strong>AI Frameworks:</strong> TensorFlow (for CNNs and lipreading models)</li>
+            <li class="tool-item"><strong>Software:</strong> Flutter (UI development), MQTT (IoT communication)</li>
+            <li class="tool-item"><strong>Algorithms:</strong> Time Difference of Arrival (TDOA) for sound localization</li>
+            <li class="tool-item"><strong>Development Tools:</strong> Git, VS Code, Arduino IDE</li>
         </ul>
         <p class="mb-2 text-gray-700">These tools enable real-time processing, low-latency alerts, and a user-friendly interface tailored for deaf drivers.</p>
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="section">
-        <h2 class="text-3xl font-bold mb-4 text-blue-800">Achievements</h2>
-        <ul class="list-disc pl-6 mb-4 text-gray-700">
-            <li>Achieved 94.2% accuracy in horn detection using CNNs (tested May 2025).</li>
-            <li>Reduced lipreading Word Error Rate to 10.8% with optimized models (April 2025).</li>
-            <li>Improved driver behavior monitoring to 96% accuracy (March 2025).</li>
-            <li>Decreased system response time to 180 ms, surpassing the 200 ms target (May 2025).</li>
-            <li>Presented progress at SLIIT Research Symposium (January 2025).</li>
+    <section id="achievements" class="section achievements-section">
+        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Achievements</h2>
+        <ul class="list-none pl-0 mb-4">
+            <li class="achievement-item">Achieved 94.2% accuracy in horn detection using CNNs (tested May 2025).</li>
+            <li class="achievement-item">Reduced lipreading Word Error Rate to 10.8% with optimized models (April 2025).</li>
+            <li class="achievement-item">Improved driver behavior monitoring to 96% accuracy (March 2025).</li>
+            <li class="achievement-item">Decreased system response time to 180 ms, surpassing the 200 ms target (May 2025).</li>
+            <li class="achievement-item">Presented progress at SLIIT Research Symposium (January 2025).</li>
         </ul>
         <p class="mb-2 text-gray-700">These milestones reflect our progress toward a robust, reliable solution as of May 23, 2025.</p>
     </section>
 
     <!-- Documents Section -->
-    <section id="documents" class="section">
-        <h2 class="text-3xl font-bold mb-4 text-blue-800">Documents</h2>
-        <ul class="list-disc pl-6 text-gray-700">
-            <li><a href="assets/pdfs/24-25j-132_Group_Final_Report.pdf" class="text-blue-600 hover:underline" target="_blank">Final Report</a></li>
-            <li><a href="assets/pdfs/Web site.pdf" class="text-blue-600 hover:underline" target="_blank">Website Guidelines</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline" target="_blank">Project Charter (Pending)</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline" target="_blank">Proposal Document (Pending)</a></li>
+    <section id="documents" class="section documents-section">
+        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Documents</h2>
+        <ul class="list-none pl-0">
+            <li class="document-item"><a href="assets/pdfs/24-25j-132_Group_Final_Report.pdf" class="document-link" target="_blank">Final Report</a></li>
+            <li class="document-item"><a href="assets/pdfs/Web site.pdf" class="document-link" target="_blank">Website Guidelines</a></li>
+            <li class="document-item"><a href="#" class="document-link" target="_blank">Project Charter (Pending)</a></li>
+            <li class="document-item"><a href="#" class="document-link" target="_blank">Proposal Document (Pending)</a></li>
         </ul>
     </section>
 
     <!-- Slides Section -->
-    <section id="slides" class="section">
-        <h2 class="text-3xl font-bold mb-4 text-blue-800">Slides</h2>
-        <ul class="list-disc pl-6 text-gray-700">
-            <li><a href="#" class="text-blue-600 hover:underline" target="_blank">Proposal Presentation (Pending)</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline" target="_blank">Progress Presentation-1 (Pending)</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline" target="_blank">Progress Presentation-2 (Pending)</a></li>
-            <li><a href="#" class="text-blue-600 hover:underline" target="_blank">Final Presentation (Pending)</a></li>
+    <section id="slides" class="section slides-section">
+        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Slides</h2>
+        <ul class="list-none pl-0">
+            <li class="slide-item"><a href="#" class="slide-link" target="_blank">Proposal Presentation (Pending)</a></li>
+            <li class="slide-item"><a href="#" class="slide-link" target="_blank">Progress Presentation-1 (Pending)</a></li>
+            <li class="slide-item"><a href="#" class="slide-link" target="_blank">Progress Presentation-2 (Pending)</a></li>
+            <li class="slide-item"><a href="#" class="slide-link" target="_blank">Final Presentation (Pending)</a></li>
         </ul>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="section">
-        <h2 class="text-3xl font-bold mb-4 text-blue-800">Team</h2>
+    <section id="team" class="section team-section">
+        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Team</h2>
         <p class="mb-2 text-gray-700"><strong>Group Members:</strong></p>
-        <ul class="list-disc pl-6 mb-4 text-gray-700">
-            <li>Rusith Fernando (IT21278280) - Lead Developer</li>
-            <li>Malith Iroshan G.H.M (IT21229084) - AI Specialist</li>
-            <li>Kulana Thathsara (IT21219566) - Hardware Engineer</li>
-            <li>Nirmala Rathnayaka (IT21388316) - UI/UX Designer</li>
-        </ul>
-        <p class="text-gray-700"><strong>Supervisor:</strong> Dr. Janaka Wijayanayake, SLIIT</p>
+        <div class="team-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="team-card">
+                <p class="text-gray-700">Rusith Fernando (IT21278280) - Lead Developer</p>
+            </div>
+            <div class="team-card">
+                <p class="text-gray-700">Malith Iroshan G.H.M (IT21229084) - AI Specialist</p>
+            </div>
+            <div class="team-card">
+                <p class="text-gray-700">Kulana Thathsara (IT21219566) - Hardware Engineer</p>
+            </div>
+            <div class="team-card">
+                <p class="text-gray-700">Nirmala Rathnayaka (IT21388316) - UI/UX Designer</p>
+            </div>
+        </div>
+        <p class="mt-4 text-gray-700"><strong>Supervisor:</strong> Dr. Janaka Wijayanayake, SLIIT</p>
     </section>
 
     <!-- Contact Us Section -->
-    <section id="contact" class="section">
-        <h2 class="text-3xl font-bold mb-4 text-blue-800">Contact Us</h2>
-        <p class="mb-2 text-gray-700"><strong>General Contact:</strong></p>
-        <p class="text-gray-700">Email: rpteam@sliit.lk</p>
-        <p class="text-gray-700">Phone: +94 11 234 5678</p>
+    <section id="contact" class="section contact-section">
+        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Contact Us</h2>
+        <div class="contact-card p-4">
+            <p class="mb-2 text-gray-700"><strong>General Contact:</strong></p>
+            <p class="text-gray-700">Email: rpteam@sliit.lk</p>
+            <p class="text-gray-700">Phone: +94 11 234 5678</p>
+        </div>
     </section>
 
     <!-- Back to Top Button -->
     <button class="back-to-top" onclick="scrollToTop()">↑</button>
 
     <!-- Footer -->
-    <footer class="text-white p-4 text-center">
+    <footer class="footer">
         <p>© 2025 RP Team, SLIIT. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Animations and Back to Top -->
-    <script>
-        // Intersection Observer for Section Animations
-        const sections = document.querySelectorAll('.section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        sections.forEach(section => observer.observe(section));
-
-        // Back to Top Button Visibility
-        const backToTopButton = document.querySelector('.back-to-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        });
-
-        // Smooth Scroll to Top
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
