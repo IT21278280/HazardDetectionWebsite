@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +6,8 @@
     <title>Hazard Detection System for Deaf Drivers</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -21,11 +20,12 @@
         </div>
         <ul class="flex space-x-6">
             <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#what-we-provide" class="nav-link">What We Provide</a></li>
             <li><a href="#introduction" class="nav-link">Introduction</a></li>
             <li><a href="#domain" class="nav-link">Domain</a></li>
             <li class="dropdown relative">
                 <a href="#milestones" class="nav-link">Milestones</a>
-                <div class="dropdown-content absolute bg-blue-900 text-white p-2 rounded shadow-lg">
+                <div class="dropdown-content absolute bg-gray-800 text-white p-2 rounded shadow-lg">
                     <a href="#proposal" class="dropdown-item block p-1 rounded">Project Proposal</a>
                     <a href="#progress1" class="dropdown-item block p-1 rounded">Progress Presentation-1</a>
                     <a href="#progress2" class="dropdown-item block p-1 rounded">Progress Presentation-2</a>
@@ -33,146 +33,312 @@
                     <a href="#viva" class="dropdown-item block p-1 rounded">Viva</a>
                 </div>
             </li>
-            <li><a href="#tools" class="nav-link">Tools and Technologies</a></li>
+            <li><a href="#tools" class="nav-link">Tools</a></li>
             <li><a href="#achievements" class="nav-link">Achievements</a></li>
             <li><a href="#documents" class="nav-link">Documents</a></li>
             <li><a href="#slides" class="nav-link">Slides</a></li>
             <li><a href="#team" class="nav-link">Team</a></li>
-            <li><a href="#contact" class="nav-link">Contact Us</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="section home-section">
-        <h1 class="section-title text-4xl font-bold mb-4 text-center text-blue-900">Autonomous IoT-Enabled Hazard Detection System for Deaf Drivers</h1>
-        <p class="text-lg mb-4 text-center text-gray-700">
-            This project, developed by Group 24-25J-132 at SLIIT, introduces a system to enhance road safety for deaf drivers in urban environments like Colombo. It integrates horn detection (94.2% accuracy), lipreading (10.8% WER), and driver behavior monitoring (96% accuracy) using IoT and AI technologies. Our solution reduces response times by 1.2 seconds, empowering deaf drivers with safer, independent mobility.
+    <section id="home" class="section">
+        <h1 class="section-title text-4xl font-bold mb-6">Autonomous IoT-Enabled Hazard Detection System for Deaf Drivers</h1>
+        <p class="text-lg mb-6 text-gray-300">
+            This project, developed by Group 24-25J-132 at SLIIT, enhances road safety for deaf drivers in urban environments like Colombo. It integrates horn detection (94.2% accuracy), lipreading (10.8% WER), and driver behavior monitoring (96% accuracy) using IoT and AI technologies, reducing response times by 1.2 seconds.
         </p>
     </section>
 
+    <!-- What We Provide Section -->
+    <section id="what-we-provide" class="section">
+        <h2 class="section-title text-4xl font-bold mb-6">What Do We Provide?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="card bg-gray-800 p-6 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-bullseye fa-3x mb-4 text-blue-400"></i>
+                <h3 class="text-xl font-semibold">Precision</h3>
+                <p>Real-time hazard detection with 94.2% accuracy for informed decisions.</p>
+            </div>
+            <div class="card bg-gray-800 p-6 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-shield-alt fa-3x mb-4 text-green-400"></i>
+                <h3 class="text-xl font-semibold">Safety</h3>
+                <p>Protects deaf drivers with robust monitoring and alert systems.</p>
+            </div>
+            <div class="card bg-gray-800 p-6 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-universal-access fa-3x mb-4 text-purple-400"></i>
+                <h3 class="text-xl font-semibold">Accessibility</h3>
+                <p>Empowers deaf drivers with visual and tactile feedback.</p>
+            </div>
+            <div class="card bg-gray-800 p-6 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-lightbulb fa-3x mb-4 text-yellow-400"></i>
+                <h3 class="text-xl font-semibold">Innovation</h3>
+                <p>Cutting-edge IoT and AI integration for future mobility.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Introduction Section -->
-    <section id="introduction" class="section intro-section">
-        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Introduction</h2>
-        <p class="mb-2 text-gray-700">Deaf drivers face significant challenges in urban traffic, where auditory cues like car horns are critical for safety. In Colombo, with traffic noise levels averaging 85 dB, traditional assistive technologies fall short due to their inability to provide real-time, directional alerts. This project addresses this gap by developing an autonomous IoT-enabled system that uses advanced AI to detect hazards, interpret lip movements, and monitor driver behavior, tailored specifically for the deaf community.</p>
-        <p class="mb-2 text-gray-700">Launched in September 2024, the project aims to bridge accessibility gaps in transportation, aligning with global inclusivity goals. By leveraging cutting-edge technology, we seek to reduce accident risks and enhance the quality of life for deaf individuals in Sri Lanka.</p>
+    <section id="introduction" class="section">
+        <h2 class="section-title text-3xl font-bold mb-6">Introduction</h2>
+        <div class="card bg-gray-800 p-6 text-gray-300 rounded-lg shadow-lg">
+            <p>Deaf drivers face challenges in urban traffic, especially in Colombo (85 dB noise). This project uses AI and IoT to detect hazards, interpret lip movements, and monitor behavior, launched in September 2024 to enhance inclusivity.</p>
+        </div>
     </section>
 
     <!-- Domain Section -->
-    <section id="domain" class="section domain-section">
-        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Domain</h2>
-        <div class="domain-card p-4">
-            <p class="mb-2 text-gray-700"><strong>Literature Survey:</strong> Existing assistive technologies for deaf drivers lack directional awareness and noise robustness (Beritelli [1], Zhao [3]). Lipreading systems struggle in automotive settings (LipNet [6]).</p>
-            <p class="mb-2 text-gray-700"><strong>Research Gap:</strong> No integrated system combines horn detection, lipreading, and behavior monitoring for deaf drivers.</p>
-            <p class="mb-2 text-gray-700"><strong>Research Problem:</strong> Deaf drivers face heightened risks in Colombo’s noisy traffic (85 dB) due to missed auditory cues.</p>
-            <p class="mb-2 text-gray-700"><strong>Objectives:</strong> Achieve >90% horn detection accuracy, <12% WER for lipreading, and <200 ms latency.</p>
-            <p class="mb-2 text-gray-700"><strong>Methodology:</strong> Uses CNNs, TDOA, and IoT (ESP32, Raspberry Pi) for real-time processing.</p>
-            <p class="text-gray-700"><strong>Technology:</strong> TensorFlow, Flutter, MQTT, NVIDIA Jetson Nano.</p>
+    <section id="domain" class="section">
+        <h2 class="section-title text-3xl font-bold mb-6">Domain</h2>
+        <div class="card bg-gray-800 p-6 text-gray-300 rounded-lg shadow-lg">
+            <p><strong>Literature Survey:</strong> Existing systems lack directional awareness (Beritelli [1], Zhao [3]).</p>
+            <p><strong>Research Gap:</strong> No integrated solution for deaf drivers.</p>
+            <p><strong>Problem:</strong> Missed auditory cues in noisy traffic.</p>
+            <p><strong>Objectives:</strong> >90% detection, <12% WER, <200 ms latency.</p>
+            <p><strong>Methodology:</strong> CNNs, TDOA, IoT (ESP32, Raspberry Pi).</p>
+            <p><strong>Technology:</strong> TensorFlow, Flutter, MQTT, Jetson Nano.</p>
         </div>
     </section>
 
     <!-- Milestones Section -->
-    <section id="milestones" class="section milestones-section">
-        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Milestones</h2>
-        <div class="milestone-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div id="proposal" class="milestone-card">
-                <h3 class="text-2xl font-semibold text-blue-700">Project Proposal</h3>
-                <p class="text-gray-700">Date: September 2024, Marks: 10%</p>
+    <section id="milestones" class="section">
+        <h2 class="section-title text-3xl font-bold mb-6">Milestones</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div id="proposal" class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="text-xl font-semibold">Project Proposal</h3>
+                <p>Date: September 2024, Marks: 10%</p>
             </div>
-            <div id="progress1" class="milestone-card">
-                <h3 class="text-2xl font-semibold text-blue-700">Progress Presentation-1</h3>
-                <p class="text-gray-700">Date: November 2024, Marks: 15%</p>
+            <div id="progress1" class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="text-xl font-semibold">Progress Presentation-1</h3>
+                <p>Date: November 2024, Marks: 15%</p>
             </div>
-            <div id="progress2" class="milestone-card">
-                <h3 class="text-2xl font-semibold text-blue-700">Progress Presentation-2</h3>
-                <p class="text-gray-700">Date: January 2025, Marks: 15%</p>
+            <div id="progress2" class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="text-xl font-semibold">Progress Presentation-2</h3>
+                <p>Date: January 2025, Marks: 15%</p>
             </div>
-            <div id="final" class="milestone-card">
-                <h3 class="text-2xl font-semibold text-blue-700">Final Assessment</h3>
-                <p class="text-gray-700">Date: April 2025, Marks: 40%</p>
+            <div id="final" class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="text-xl font-semibold">Final Assessment</h3>
+                <p>Date: April 2025, Marks: 40%</p>
             </div>
-            <div id="viva" class="milestone-card">
-                <h3 class="text-2xl font-semibold text-blue-700">Viva</h3>
-                <p class="text-gray-700">Date: April 2025, Marks: 20%</p>
+            <div id="viva" class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <h3 class="text-xl font-semibold">Viva</h3>
+                <p>Date: April 2025, Marks: 20%</p>
             </div>
         </div>
     </section>
 
     <!-- Tools and Technologies Section -->
-    <section id="tools" class="section tools-section">
-        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Tools and Technologies</h2>
-        <ul class="list-none pl-0 mb-4">
-            <li class="tool-item"><strong>Hardware:</strong> ESP32, Raspberry Pi, NVIDIA Jetson Nano</li>
-            <li class="tool-item"><strong>AI Frameworks:</strong> TensorFlow (for CNNs and lipreading models)</li>
-            <li class="tool-item"><strong>Software:</strong> Flutter (UI development), MQTT (IoT communication)</li>
-            <li class="tool-item"><strong>Algorithms:</strong> Time Difference of Arrival (TDOA) for sound localization</li>
-            <li class="tool-item"><strong>Development Tools:</strong> Git, VS Code, Arduino IDE</li>
-        </ul>
-        <p class="mb-2 text-gray-700">These tools enable real-time processing, low-latency alerts, and a user-friendly interface tailored for deaf drivers.</p>
+    <section id="tools" class="section">
+        <h2 class="section-title text-3xl font-bold mb-6">Tools and Technologies</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-microchip fa-2x mb-2 text-blue-400"></i>
+                <h3 class="text-xl font-semibold">Hardware</h3>
+                <p>ESP32, Raspberry Pi, NVIDIA Jetson Nano</p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-brain fa-2x mb-2 text-green-400"></i>
+                <h3 class="text-xl font-semibold">AI Frameworks</h3>
+                <p>TensorFlow (CNNs, lipreading)</p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-code fa-2x mb-2 text-purple-400"></i>
+                <h3 class="text-xl font-semibold">Software</h3>
+                <p>Flutter, MQTT</p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-cogs fa-2x mb-2 text-yellow-400"></i>
+                <h3 class="text-xl font-semibold">Algorithms</h3>
+                <p>Time Difference of Arrival (TDOA)</p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-tools fa-2x mb-2 text-red-400"></i>
+                <h3 class="text-xl font-semibold">Development Tools</h3>
+                <p>Git, VS Code, Arduino IDE</p>
+            </div>
+        </div>
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements" class="section achievements-section">
-        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Achievements</h2>
-        <ul class="list-none pl-0 mb-4">
-            <li class="achievement-item">Achieved 94.2% accuracy in horn detection using CNNs (tested May 2025).</li>
-            <li class="achievement-item">Reduced lipreading Word Error Rate to 10.8% with optimized models (April 2025).</li>
-            <li class="achievement-item">Improved driver behavior monitoring to 96% accuracy (March 2025).</li>
-            <li class="achievement-item">Decreased system response time to 180 ms, surpassing the 200 ms target (May 2025).</li>
-            <li class="achievement-item">Presented progress at SLIIT Research Symposium (January 2025).</li>
-        </ul>
-        <p class="mb-2 text-gray-700">These milestones reflect our progress toward a robust, reliable solution as of May 23, 2025.</p>
+    <section id="achievements" class="section">
+        <h2 class="section-title text-3xl font-bold mb-6">Achievements</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-trophy fa-2x mb-2 text-yellow-400"></i>
+                <h3 class="text-xl font-semibold">Horn Detection</h3>
+                <p>94.2% accuracy (May 2025)</p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-trophy fa-2x mb-2 text-yellow-400"></i>
+                <h3 class="text-xl font-semibold">Lipreading</h3>
+                <p>10.8% WER (April 2025)</p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-trophy fa-2x mb-2 text-yellow-400"></i>
+                <h3 class="text-xl font-semibold">Behavior Monitoring</h3>
+                <p>96% accuracy (March 2025)</p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-trophy fa-2x mb-2 text-yellow-400"></i>
+                <h3 class="text-xl font-semibold">Response Time</h3>
+                <p>180 ms (May 2025)</p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-trophy fa-2x mb-2 text-yellow-400"></i>
+                <h3 class="text-xl font-semibold">Research Symposium</h3>
+                <p>SLIIT (January 2025)</p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-book fa-2x mb-2 text-blue-400"></i>
+                <h3 class="text-xl font-semibold">Research Paper</h3>
+                <p>AI-Driven Hazard Detection (Pending)</p>
+            </div>
+        </div>
     </section>
 
     <!-- Documents Section -->
-    <section id="documents" class="section documents-section">
-        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Documents</h2>
-        <ul class="list-none pl-0">
-            <li class="document-item"><a href="assets/pdfs/24-25j-132_Group_Final_Report.pdf" class="document-link" target="_blank">Final Report</a></li>
-            <li class="document-item"><a href="assets/pdfs/Web site.pdf" class="document-link" target="_blank">Website Guidelines</a></li>
-            <li class="document-item"><a href="#" class="document-link" target="_blank">Project Charter (Pending)</a></li>
-            <li class="document-item"><a href="#" class="document-link" target="_blank">Proposal Document (Pending)</a></li>
-        </ul>
+    <section id="documents" class="section">
+        <h2 class="section-title text-3xl font-bold mb-6">Documents</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-file-pdf fa-2x mb-2 text-red-400"></i>
+                <h3 class="text-xl font-semibold">Final Report</h3>
+                <p><a href="assets/pdfs/24-25j-132_Group_Final_Report.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a></p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-file-pdf fa-2x mb-2 text-red-400"></i>
+                <h3 class="text-xl font-semibold">Website Guidelines</h3>
+                <p><a href="assets/pdfs/Web site.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a></p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-file-pdf fa-2x mb-2 text-red-400"></i>
+                <h3 class="text-xl font-semibold">Project Charter</h3>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a></p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-file-pdf fa-2x mb-2 text-red-400"></i>
+                <h3 class="text-xl font-semibold">Proposal Document</h3>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a></p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-file-pdf fa-2x mb-2 text-red-400"></i>
+                <h3 class="text-xl font-semibold">Status Document 01</h3>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a></p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-file-pdf fa-2x mb-2 text-red-400"></i>
+                <h3 class="text-xl font-semibold">Progress Presentation 01</h3>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a></p>
+            </div>
+        </div>
     </section>
 
     <!-- Slides Section -->
-    <section id="slides" class="section slides-section">
-        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Slides</h2>
-        <ul class="list-none pl-0">
-            <li class="slide-item"><a href="#" class="slide-link" target="_blank">Proposal Presentation (Pending)</a></li>
-            <li class="slide-item"><a href="#" class="slide-link" target="_blank">Progress Presentation-1 (Pending)</a></li>
-            <li class="slide-item"><a href="#" class="slide-link" target="_blank">Progress Presentation-2 (Pending)</a></li>
-            <li class="slide-item"><a href="#" class="slide-link" target="_blank">Final Presentation (Pending)</a></li>
-        </ul>
+    <section id="slides" class="section">
+        <h2 class="section-title text-3xl font-bold mb-6">Slides</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-file-powerpoint fa-2x mb-2 text-orange-400"></i>
+                <h3 class="text-xl font-semibold">Proposal Presentation</h3>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a></p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-file-powerpoint fa-2x mb-2 text-orange-400"></i>
+                <h3 class="text-xl font-semibold">Progress Presentation-1</h3>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a></p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-file-powerpoint fa-2x mb-2 text-orange-400"></i>
+                <h3 class="text-xl font-semibold">Progress Presentation-2</h3>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a></p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-file-powerpoint fa-2x mb-2 text-orange-400"></i>
+                <h3 class="text-xl font-semibold">Final Presentation</h3>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a></p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-file-powerpoint fa-2x mb-2 text-orange-400"></i>
+                <h3 class="text-xl font-semibold">Progress Presentation 02</h3>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a></p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <i class="fas fa-file-powerpoint fa-2x mb-2 text-orange-400"></i>
+                <h3 class="text-xl font-semibold">Poster</h3>
+                <p><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a></p>
+            </div>
+        </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="section team-section">
-        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Team</h2>
-        <p class="mb-2 text-gray-700"><strong>Group Members:</strong></p>
-        <div class="team-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="team-card">
-                <p class="text-gray-700">Rusith Fernando (IT21278280) - Lead Developer</p>
+    <section id="team" class="section">
+        <h2 class="section-title text-3xl font-bold mb-6">Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <img src="https://via.placeholder.com/150" alt="Rusith Fernando" class="w-full h-40 object-cover rounded-t-lg">
+                <h3 class="text-xl font-semibold">Rusith Fernando (IT21278280)</h3>
+                <p>Lead Developer</p>
+                <a href="#" class="text-blue-400 hover:underline"><i class="fab fa-linkedin"></i></a>
             </div>
-            <div class="team-card">
-                <p class="text-gray-700">Malith Iroshan G.H.M (IT21229084) - AI Specialist</p>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <img src="https://via.placeholder.com/150" alt="Malith Iroshan" class="w-full h-40 object-cover rounded-t-lg">
+                <h3 class="text-xl font-semibold">Malith Iroshan (IT21229084)</h3>
+                <p>AI Specialist</p>
+                <a href="#" class="text-blue-400 hover:underline"><i class="fab fa-linkedin"></i></a>
             </div>
-            <div class="team-card">
-                <p class="text-gray-700">Kulana Thathsara (IT21219566) - Hardware Engineer</p>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <img src="https://via.placeholder.com/150" alt="Kulana Thathsara" class="w-full h-40 object-cover rounded-t-lg">
+                <h3 class="text-xl font-semibold">Kulana Thathsara (IT21219566)</h3>
+                <p>Hardware Engineer</p>
+                <a href="#" class="text-blue-400 hover:underline"><i class="fab fa-linkedin"></i></a>
             </div>
-            <div class="team-card">
-                <p class="text-gray-700">Nirmala Rathnayaka (IT21388316) - UI/UX Designer</p>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <img src="https://via.placeholder.com/150" alt="Nirmala Rathnayaka" class="w-full h-40 object-cover rounded-t-lg">
+                <h3 class="text-xl font-semibold">Nirmala Rathnayaka (IT21388316)</h3>
+                <p>UI/UX Designer</p>
+                <a href="#" class="text-blue-400 hover:underline"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
-        <p class="mt-4 text-gray-700"><strong>Supervisor:</strong> Dr. Janaka Wijayanayake, SLIIT</p>
+        <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg mt-6">
+            <p><strong>Supervisor:</strong> Dr. Janaka Wijayanayake, SLIIT</p>
+        </div>
     </section>
 
     <!-- Contact Us Section -->
-    <section id="contact" class="section contact-section">
-        <h2 class="section-title text-3xl font-bold mb-4 text-blue-800">Contact Us</h2>
-        <div class="contact-card p-4">
-            <p class="mb-2 text-gray-700"><strong>General Contact:</strong></p>
-            <p class="text-gray-700">Email: rpteam@sliit.lk</p>
-            <p class="text-gray-700">Phone: +94 11 234 5678</p>
+    <section id="contact" class="section">
+        <h2 class="section-title text-3xl font-bold mb-6">Contact</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold">Get in Touch</h3>
+                <input type="text" placeholder="Email address" class="w-full p-2 mb-2 bg-gray-700 text-white rounded">
+                <p class="text-sm mb-2">We'll never share your email with anyone else.</p>
+                <input type="text" placeholder="Inquiry" class="w-full p-2 mb-2 bg-gray-700 text-white rounded">
+                <button class="bg-blue-500 text-white p-2 rounded w-full">Submit</button>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold">Contact Info</h3>
+                <p>please contact us for any clarification</p>
+                <p>Email: rpteam@sliit.lk</p>
+                <p>Phone: +94 11 234 5678</p>
+            </div>
+            <div class="card bg-gray-800 p-4 text-gray-300 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold">Newsletter</h3>
+                <p>Subscribe our newsletter for more information</p>
+                <input type="text" placeholder="Recipient's username" class="w-full p-2 mb-2 bg-gray-700 text-white rounded">
+                <button class="bg-blue-500 text-white p-2 rounded w-full"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <div class="mt-6 text-center text-gray-400">
+            <h3 class="text-xl font-semibold">Quick Links</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-gray-300">
+                <a href="#home" class="hover:text-blue-400">Home</a>
+                <a href="#introduction" class="hover:text-blue-400">Introduction</a>
+                <a href="#domain" class="hover:text-blue-400">Domain</a>
+                <a href="#milestones" class="hover:text-blue-400">Milestones</a>
+                <a href="#documents" class="hover:text-blue-400">Documents</a>
+                <a href="#tools" class="hover:text-blue-400">Tools</a>
+                <a href="#achievements" class="hover:text-blue-400">Achievements</a>
+                <a href="#team" class="hover:text-blue-400">Team</a>
+                <a href="#contact" class="hover:text-blue-400">Contact</a>
+            </div>
         </div>
     </section>
 
@@ -180,7 +346,7 @@
     <button class="back-to-top" onclick="scrollToTop()">↑</button>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer p-4 text-center text-gray-400">
         <p>© 2025 RP Team, SLIIT. All rights reserved.</p>
     </footer>
 
