@@ -42,3 +42,61 @@ OpenJDK 64-Bit Server VM Microsoft-10800295 (build 17.0.14+7-LTS, mixed mode, sh
 
 2025-05-23 18:06:01 info: Java installed on machine.
 2025-05-23 18:48:44 info: Row(s) deleted
+2025-05-23 18:49:20 info: Row(s) deleted
+2025-05-23 18:49:20 info: Row(s) deleted
+2025-05-23 18:53:30 info: Row(s) deleted
+2025-05-23 18:57:18 info: Row(s) deleted
+2025-05-23 19:17:35 info: Row(s) deleted
+2025-05-23 19:18:57 info: Row(s) deleted
+2025-05-23 19:22:02 info: Row(s) deleted
+2025-05-23 19:23:21 info: Row(s) deleted
+2025-05-23 19:26:48 info: Row(s) deleted
+2025-05-23 20:00:30 info: Row(s) deleted
+2025-05-23 20:09:56 info: Row(s) deleted
+2025-05-23 20:11:33 info: Row(s) deleted
+2025-05-23 20:11:35 info: Row(s) deleted
+2025-05-23 20:29:33 info: Row(s) deleted
+2025-05-23 20:32:29 info: Row(s) deleted
+2025-05-23 20:32:34 info: Row(s) deleted
+2025-05-23 20:35:35 info: Row(s) deleted
+2025-05-23 20:38:25 info: Congratulations, your extension "Embold" is now active!
+2025-05-23 20:38:25 info: ************* init ****************
+2025-05-23 20:38:25 info: tempDirectory : c:\Users\USER\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-05-23 20:38:27 info: Extraction complete for source: c:\Users\USER\.vscode\extensions\embold-vscode.embold-0.3.0\resources\embold-scanner-archive.zip, destination: c:\Users\USER\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-05-23 20:38:27 info: Extension installed on machine OS : win32
+2025-05-23 20:38:27 info: Fetched the issues from DB
+2025-05-23 20:38:28 info: Embold extension version response:{"hasSupport":false,"version":"0.2.1","changeNotes":"<div> <p>Release Date: 30 Apr, 2025 <br><span>Bug fixes and improvements.</span></p> </div>"}
+2025-05-23 20:38:28 info: Current installed embold extension version : 0.3.0
+2025-05-23 20:38:28 info: Latest embold extension version on marketplace : 0.2.1
+2025-05-23 20:38:28 info: Current extension version: 0.3.0
+2025-05-23 20:38:28 info: Stored extension version: 0.3.0
+2025-05-23 20:38:28 info: No new installation or upgrade detected. Skipping plugin activation tracking.
+2025-05-23 20:38:28 info: Java version installed on machine : 
+openjdk version "17.0.14" 2025-01-21 LTS
+OpenJDK Runtime Environment Microsoft-10800295 (build 17.0.14+7-LTS)
+OpenJDK 64-Bit Server VM Microsoft-10800295 (build 17.0.14+7-LTS, mixed mode, sharing)
+
+2025-05-23 20:38:28 info: Java installed on machine.
+2025-05-24 00:57:57 info: Row(s) deleted
+2025-05-24 01:01:22 info: Row(s) deleted
+2025-05-26 13:16:09 info: Congratulations, your extension "Embold" is now active!
+2025-05-26 13:16:09 info: ************* init ****************
+2025-05-26 13:16:09 info: tempDirectory : c:\Users\USER\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-05-26 13:16:11 info: Extraction complete for source: c:\Users\USER\.vscode\extensions\embold-vscode.embold-0.3.0\resources\embold-scanner-archive.zip, destination: c:\Users\USER\.vscode\extensions\embold-vscode.embold-0.3.0\temp
+2025-05-26 13:16:11 info: Extension installed on machine OS : win32
+2025-05-26 13:16:11 info: Fetched the issues from DB
+2025-05-26 13:16:11 info: Java version installed on machine : 
+openjdk version "17.0.14" 2025-01-21 LTS
+OpenJDK Runtime Environment Microsoft-10800295 (build 17.0.14+7-LTS)
+OpenJDK 64-Bit Server VM Microsoft-10800295 (build 17.0.14+7-LTS, mixed mode, sharing)
+
+2025-05-26 13:16:11 info: Java installed on machine.
+2025-05-26 13:16:27 info: Embold extension version response:{"hasSupport":false,"version":"0.2.1","changeNotes":"<div> <p>Release Date: 30 Apr, 2025 <br><span>Bug fixes and improvements.</span></p> </div>"}
+2025-05-26 13:16:27 info: Current installed embold extension version : 0.3.0
+2025-05-26 13:16:27 info: Latest embold extension version on marketplace : 0.2.1
+2025-05-26 13:16:27 info: Current extension version: 0.3.0
+2025-05-26 13:16:27 info: Stored extension version: 0.3.0
+2025-05-26 13:16:27 info: No new installation or upgrade detected. Skipping plugin activation tracking.
+2025-05-26 13:16:27 info: Row(s) deleted
+2025-05-26 13:20:11 info: Row(s) deleted
+2025-05-26 13:28:16 info: Row(s) deleted
