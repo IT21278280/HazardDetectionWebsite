@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Ensure timeline alignment and responsiveness */
+        .timeline-middle { display: flex; align-items: center; justify-content: center; }
+        .timeline-start { padding: 1rem; }
+        @media (max-width: 768px) {
+            .timeline-start { width: 100%; }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -26,8 +35,8 @@
             <li><a href="#introduction" class="nav-link text-sm md:text-base">Introduction</a></li>
             <li><a href="#our-domain" class="nav-link text-sm md:text-base">Our Domain</a></li>
             <li class="dropdown relative">
-                <a href="#milestones" class="nav-link text-sm md:text-base">Milestones</a>
-                <div class="dropdown-content absolute bg-gray-800 text-white p-2 rounded shadow-lg mt-2 md:mt-1">
+                <a href="#milestones" class="nav-link text-sm md:text-base" aria-haspopup="true" aria-expanded="false">Milestones</a>
+                <div class="dropdown-content absolute bg-gray-800 text-white p-2 rounded shadow-lg mt-2 md:mt-1 hidden">
                     <a href="#brainstorming" class="dropdown-item block p-1 text-sm rounded">Brainstorming Workshop</a>
                     <a href="#proposal" class="dropdown-item block p-1 text-sm rounded">Project Proposal</a>
                     <a href="#progress1" class="dropdown-item block p-1 text-sm rounded">Progress Presentation-1</a>
@@ -58,22 +67,22 @@
         <h2 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">What Do We Provide?</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             <div class="card bg-gray-800 p-3 md:p-4 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-bullseye fa-2x md:fa-3x mb-2 md:mb-4 text-blue-400"></i>
+                <i class="fas fa-bullseye fa-2x mb-2 md:mb-4 text-blue-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Precision</h3>
                 <p class="text-sm md:text-base">Real-time hazard detection with 94.2% accuracy using CNNs, tested across 500+ urban scenarios.</p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-shield-alt fa-2x md:fa-3x mb-2 md:mb-4 text-green-400"></i>
+                <i class="fas fa-shield-alt fa-2x mb-2 md:mb-4 text-green-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Safety</h3>
                 <p class="text-sm md:text-base">Robust alerts via LED displays and vibration motors, validated in 100 driver simulations.</p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-universal-access fa-2x md:fa-3x mb-2 md:mb-4 text-purple-400"></i>
+                <i class="fas fa-universal-access fa-2x mb-2 md:mb-4 text-purple-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Accessibility</h3>
                 <p class="text-sm md:text-base">Custom interfaces for deaf users, supporting sign language integration with 85% recognition rate.</p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-center text-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-lightbulb fa-2x md:fa-3x mb-2 md:mb-4 text-yellow-400"></i>
+                <i class="fas fa-lightbulb fa-2x mb-2 md:mb-4 text-yellow-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Innovation</h3>
                 <p class="text-sm md:text-base">Pioneers IoT-AI fusion with TDOA algorithms, patent application filed in March 2025.</p>
             </div>
@@ -93,55 +102,55 @@
         <h2 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Our Domain</h2>
         <div class="space-y-2">
             <div class="collapse collapse-arrow bg-gray-800 text-white">
-                <input type="checkbox" class="peer" />
-                <div class="collapse-title text-lg md:text-xl font-medium flex items-center">
+                <input type="checkbox" class="peer" id="literature-survey" />
+                <label for="literature-survey" class="collapse-title text-lg md:text-xl font-medium flex items-center">
                     <i class="fas fa-plus mr-2"></i> Literature Survey
-                </div>
+                </label>
                 <div class="collapse-content text-gray-300 text-sm md:text-base">
-                    <p>The literature review explores existing assistive technologies for deaf drivers, highlighting critical limitations in current solutions. Early systems such as Beritelli and Casale’s siren detection (88% accuracy) and DriveAlert’s mirror-mounted lights lacked directional awareness and performed poorly in noisy urban environments. Vibrotactile cushions provided generalized vibrations but could not differentiate sound sources. Horn detection studies, like Zhao’s TDOA-based localization, performed well in labs but failed under real-world urban noise (85 dB), suffering from high false positives and latency. Lipreading models like LipNet and adaptations by Alamri et al. showed promise but struggled with lighting variations and driver movements in cars. Most behavior monitoring systems—such as those by Alamri and Kang—relied on auditory alerts, making them inaccessible for deaf users. None of the reviewed systems integrated all critical components (horn detection, lipreading, behavior monitoring) into a unified solution tailored for deaf drivers. The review identifies a gap for a noise-robust, direction-aware, real-time assistive system with non-auditory feedback. The proposed system, combining CNNs, TDOA, IoT, and haptic feedback, achieves superior performance—94.2% horn detection accuracy, 10.8% WER in lipreading, and 96% behavior detection accuracy—positioning it as a significant advancement in inclusive road safety technology.</p>
+                    <p>The literature review explores existing assistive technologies for deaf drivers, highlighting critical limitations in current solutions. Early systems such as Beritelli and Casale’s siren detection (88% accuracy) and DriveAlert’s mirror-mounted lights lacked directional awareness and performed poorly in noisy urban environments. Vibrotactile cushions provided generalized vibrations but could not differentiate sound sources. Horn detection studies, like Zhao’s TDOA-based localization, performed well in labs but failed under real-world urban noise (85 dB), suffering from high false positives and latency. Lipreading models like LipNet and adaptations by Alamri et al. showed promise but struggled with lighting variations and driver movements in cars. Most behavior monitoring systems—such as those by Alamri and Kang—relied on auditory alerts, making them inaccessible for deaf users. None of the reviewed systems integrated all critical components (horn detection, lipreading, behavior monitoring) into a unified solution tailored for deaf drivers. The review identifies a gap for a noise-robust, direction-aware, real-time assistive system with non-auditory feedback. The proposed system, combining CNNs, TDOA, IoT, and haptic feedback, achieves superior performance—94.2% horn detection accuracy, 10.8% WER in lipreading, and 96% behavior detection accuracy—positioning it as a significant advancement in inclusive road safety technology.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-gray-800 text-white">
-                <input type="checkbox" class="peer" />
-                <div class="collapse-title text-lg md:text-xl font-medium flex items-center">
+                <input type="checkbox" class="peer" id="research-gap" />
+                <label for="research-gap" class="collapse-title text-lg md:text-xl font-medium flex items-center">
                     <i class="fas fa-plus mr-2"></i> Research Gap
-                </div>
+                </label>
                 <div class="collapse-content text-gray-300 text-sm md:text-base">
-                    <p>The research identifies a significant gap in existing assistive technologies for deaf drivers—specifically, the absence of a unified, context-aware, and non-auditory hazard detection and communication system suitable for real-world urban conditions. Current solutions lack integration across key areas: horn detection systems offer either detection or directionality, but not both, and struggle with false positives in high-noise environments like Colombo. Lipreading technologies have yet to be adapted for vehicular contexts, facing challenges with occlusions, lighting variability, and driver head movement. Behavior monitoring systems either rely on auditory feedback or require costly, high-performance GPUs, making them impractical for large-scale use in developing countries. Furthermore, no existing solution addresses emergency communication needs during accidents for deaf drivers. The literature emphasizes the demand for directional alerts and accessible feedback—both of which are insufficiently addressed in present offerings. This project fills these voids by integrating advanced CNNs, TDOA localization, LipCam-based lipreading, and sensor-fusion-based behavior monitoring into a low-latency, IoT-driven solution. The resulting system delivers precise, real-time alerts through visual and haptic channels, tailored for deaf drivers navigating complex urban traffic, with performance validated under realistic field conditions in Colombo. This represents a novel contribution to the accessibility and automotive safety domains.</p>
+                    <p>The research identifies a significant gap in existing assistive technologies for deaf drivers—specifically, the absence of a unified, context-aware, and non-auditory hazard detection and communication system suitable for real-world urban conditions. Current solutions lack integration across key areas: horn detection systems offer either detection or directionality, but not both, and struggle with false positives in high-noise environments like Colombo. Lipreading technologies have yet to be adapted for vehicular contexts, facing challenges with occlusions, lighting variability, and driver head movement. Behavior monitoring systems either rely on auditory feedback or require costly, high-performance GPUs, making them impractical for large-scale use in developing countries. Furthermore, no existing solution addresses emergency communication needs during accidents for deaf drivers. The literature emphasizes the demand for directional alerts and accessible feedback—both of which are insufficiently addressed in present offerings. This project fills these voids by integrating advanced CNNs, TDOA localization, LipCam-based lipreading, and sensor-fusion-based behavior monitoring into a low-latency, IoT-driven solution. The resulting system delivers precise, real-time alerts through visual and haptic channels, tailored for deaf drivers navigating complex urban traffic, with performance validated under realistic field conditions in Colombo. This represents a novel contribution to the accessibility and automotive safety domains.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-gray-800 text-white">
-                <input type="checkbox" class="peer" />
-                <div class="collapse-title text-lg md:text-xl font-medium flex items-center">
+                <input type="checkbox" class="peer" id="problem-statement" />
+                <label for="problem-statement" class="collapse-title text-lg md:text-xl font-medium flex items-center">
                     <i class="fas fa-plus mr-2"></i> Problem Statement
-                </div>
+                </label>
                 <div class="collapse-content text-gray-300 text-sm md:text-base">
-                    <p>Deaf drivers face critical road safety challenges due to their inability to perceive auditory cues like vehicle horns and emergency sirens, which are essential for quick decision-making in chaotic urban traffic environments. In Colombo, where traffic noise levels reach 85 dB and visual stimuli are overwhelming, these drivers are at elevated risk of collisions and delayed responses. Conventional Advanced Driver Assistance Systems (ADAS) primarily rely on auditory alerts, rendering them ineffective for the deaf. Existing assistive devices, such as LED-based warnings or vibrational cues, provide minimal context, lack directional awareness, and perform poorly in noise-heavy environments. Furthermore, deaf drivers face communication barriers during emergencies, unable to convey urgent information like “I need medical help” to responders. This communication gap increases their vulnerability in post-accident scenarios. The overarching problem is the lack of an integrated, robust, and real-time system that can detect hazards, enable emergency communication, and monitor driver attentiveness—all without relying on hearing. Thus, there is an urgent need for a scalable, affordable, and IoT-enabled solution that uses non-auditory feedback mechanisms to support deaf drivers. This system must perform reliably in complex, high-noise environments, reduce response time, and provide accessible communication and behavioral alerts to empower safer independent mobility.</p>
+                    <p>Deaf drivers face critical road safety challenges due to their inability to perceive auditory cues like vehicle horns and emergency sirens, which are essential for quick decision-making in chaotic urban traffic environments. In Colombo, where traffic noise levels reach 85 dB and visual stimuli are overwhelming, these drivers are at elevated risk of collisions and delayed responses. Conventional Advanced Driver Assistance Systems (ADAS) primarily rely on auditory alerts, rendering them ineffective for the deaf. Existing assistive devices, such as LED-based warnings or vibrational cues, provide minimal context, lack directional awareness, and perform poorly in noise-heavy environments. Furthermore, deaf drivers face communication barriers during emergencies, unable to convey urgent information like “I need medical help” to responders. This communication gap increases their vulnerability in post-accident scenarios. The overarching problem is the lack of an integrated, robust, and real-time system that can detect hazards, enable emergency communication, and monitor driver attentiveness—all without relying on hearing. Thus, there is an urgent need for a scalable, affordable, and IoT-enabled solution that uses non-auditory feedback mechanisms to support deaf drivers. This system must perform reliably in complex, high-noise environments, reduce response time, and provide accessible communication and behavioral alerts to empower safer independent mobility.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-gray-800 text-white">
-                <input type="checkbox" class="peer" />
-                <div class="collapse-title text-lg md:text-xl font-medium flex items-center">
+                <input type="checkbox" class="peer" id="objectives" />
+                <label for="objectives" class="collapse-title text-lg md:text-xl font-medium flex items-center">
                     <i class="fas fa-plus mr-2"></i> Objectives
-                </div>
+                </label>
                 <div class="collapse-content text-gray-300 text-sm md:text-base">
-                    <p>The project’s primary objective is to enhance road safety and communication capabilities for deaf drivers by developing an IoT-enabled, real-time system that integrates hazard detection, lipreading, and driver behavior monitoring, all delivered through accessible non-auditory feedback. To achieve this, six specific objectives were set. First, the system must detect and localize vehicle horns with over 90% accuracy and within ±5° directional precision in noisy environments (85 dB). Second, it should support emergency communication through a lipreading module that transcribes spoken phrases from dashboard camera footage with less than 12% Word Error Rate (WER), even under lighting variations between 50–500 lux. Third, the driver behavior monitoring component must detect distractions like texting or lane drifting with over 95% accuracy using visual and sensor data. Fourth, all subsystems must operate with a total latency under 200 ms to ensure timely responses at typical urban speeds (50 km/h). Fifth, field validation must confirm usability and robustness through 50 real-world trials with deaf drivers, targeting an average user rating of 4.7/5. Finally, the system should be cost-effective (~22,000 LKR/unit) and scalable for mass production, utilizing open-source tools and affordable local hardware to reach Sri Lanka’s 75,000 deaf drivers and potentially expand regionally.</p>
+                    <p>The project’s primary objective is to enhance road safety and communication capabilities for deaf drivers by developing an IoT-enabled, real-time system that integrates hazard detection, lipreading, and driver behavior monitoring, all delivered through accessible non-auditory feedback. To achieve this, six specific objectives were set. First, the system must detect and localize vehicle horns with over 90% accuracy and within ±5° directional precision in noisy environments (85 dB). Second, it should support emergency communication through a lipreading module that transcribes spoken phrases from dashboard camera footage with less than 12% Word Error Rate (WER), even under lighting variations between 50–500 lux. Third, the driver behavior monitoring component must detect distractions like texting or lane drifting with over 95% accuracy using visual and sensor data. Fourth, all subsystems must operate with a total latency under 200 ms to ensure timely responses at typical urban speeds (50 km/h). Fifth, field validation must confirm usability and robustness through 50 real-world trials with deaf drivers, targeting an average user rating of 4.7/5. Finally, the system should be cost-effective (~22,000 LKR/unit) and scalable for mass production, utilizing open-source tools and affordable local hardware to reach Sri Lanka’s 75,000 deaf drivers and potentially expand regionally.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-gray-800 text-white">
-                <input type="checkbox" class="peer" />
-                <div class="collapse-title text-lg md:text-xl font-medium flex items-center">
+                <input type="checkbox" class="peer" id="methodology" />
+                <label for="methodology" class="collapse-title text-lg md:text-xl font-medium flex items-center">
                     <i class="fas fa-plus mr-2"></i> Methodology
-                </div>
+                </label>
                 <div class="collapse-content text-gray-300 text-sm md:text-base">
-                    <p>The system architecture is composed of three main components integrated within an IoT framework: horn detection and localization, lipreading for emergency communication, and driver behavior monitoring. Horn detection uses MEMS microphones mounted at the rear of the vehicle to capture sound, processed through a CNN for classification and Time Difference of Arrival (TDOA) for direction estimation, with alerts transmitted via MQTT to a mobile app and Bluetooth-connected haptic wristband. The LipCam component uses a dashboard-mounted 1080p camera, capturing mouth movements, preprocessed using Dlib facial landmarks and augmented for lighting variability. A 3D CNN and GRU-based architecture, trained on the GRID corpus, performs real-time transcription with <100 ms latency. For behavior monitoring, dual cameras and MPU-6050 sensors capture driver and vehicle dynamics. A MobileNetV2 CNN model classifies visual behaviors, while an LSTM processes temporal sensor data. Outputs are fused to detect distractions, triggering visual alerts in the app and haptic feedback on the wristband. All modules process data locally on ESP32, Raspberry Pi, or Jetson Nano devices, ensuring privacy and minimizing latency. The system was tested in both lab and field settings with 12 deaf drivers in Colombo, validating performance under real-world conditions including high noise, low light, and traffic complexity.</p>
+                    <p>The system architecture is composed of three main components integrated within an IoT framework: horn detection and localization, lipreading for emergency communication, and driver behavior monitoring. Horn detection uses MEMS microphones mounted at the rear of the vehicle to capture sound, processed through a CNN for classification and Time Difference of Arrival (TDOA) for direction estimation, with alerts transmitted via MQTT to a mobile app and Bluetooth-connected haptic wristband. The LipCam component uses a dashboard-mounted 1080p camera, capturing mouth movements, preprocessed using Dlib facial landmarks and augmented for lighting variability. A 3D CNN and GRU-based architecture, trained on the GRID corpus, performs real-time transcription with <100 ms latency. For behavior monitoring, dual cameras and MPU-6050 sensors capture driver and vehicle dynamics. A MobileNetV2 CNN model classifies visual behaviors, while an LSTM processes temporal sensor data. Outputs are fused to detect distractions, triggering visual alerts in the app and haptic feedback on the wristband. All modules process data locally on ESP32, Raspberry Pi, or Jetson Nano devices, ensuring privacy and minimizing latency. The system was tested in both lab and field settings with 12 deaf drivers in Colombo, validating performance under real-world conditions including high noise, low light, and traffic complexity.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-gray-800 text-white">
-                <input type="checkbox" class="peer" />
-                <div class="collapse-title text-lg md:text-xl font-medium flex items-center">
+                <input type="checkbox" class="peer" id="technology" />
+                <label for="technology" class="collapse-title text-lg md:text-xl font-medium flex items-center">
                     <i class="fas fa-plus mr-2"></i> Technology
-                </div>
+                </label>
                 <div class="collapse-content text-gray-300 text-sm md:text-base">
                     <p>The proposed system leverages a combination of cutting-edge technologies to deliver a real-time, inclusive driving aid for deaf drivers. Core machine learning techniques include Convolutional Neural Networks (CNNs) for horn and siren detection, and a hybrid 3D CNN-Gated Recurrent Unit (GRU) model for lipreading. The driver behavior monitoring system employs MobileNetV2 for vision-based classification and Long Short-Term Memory (LSTM) networks for temporal pattern recognition using sensor data. IoT is central to the system, with edge devices like ESP32 handling horn detection and Bluetooth communication, Raspberry Pi 4 managing sensor fusion and siren detection, and NVIDIA Jetson Nano powering the resource-intensive LipCam module. Real-time communication is facilitated through the MQTT protocol, ensuring low-latency data transfer to the mobile app and haptic wristband. Audio preprocessing is done using Mel-Frequency Cepstral Coefficients (MFCCs), and all data is processed locally to comply with GDPR and Sri Lanka’s privacy laws. The mobile app, developed in Flutter, delivers intuitive visual cues, while haptic feedback is conveyed via Wear OS smartwatches or wristbands. All components are designed to be power-efficient and suitable for deployment in typical vehicle environments, including variable lighting and high-noise urban settings. Open-source tools such as TensorFlow and Librosa further enhance the system’s scalability and cost-effectiveness.</p>
                 </div>
@@ -158,7 +167,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="Initial idea generation session">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-lightbulb fa-lg md:fa-2x text-blue-400"></i>
+                                <i class="fas fa-lightbulb fa-2x text-blue-400"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Brainstorming Workshop</h3>
                                     <p class="text-gray-300 text-sm md:text-base">July 25, 2024</p>
@@ -179,7 +188,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="Topic approval and team formation">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-users fa-lg md:fa-2x text-green-400"></i>
+                                <i class="fas fa-users fa-2x text-green-400"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Topic Assessment Form (TAF)</h3>
                                     <p class="text-gray-300 text-sm md:text-base">March 19, 2024</p>
@@ -200,7 +209,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="Draft proposal submission">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-file-alt fa-lg md:fa-2x text-purple-400"></i>
+                                <i class="fas fa-file-alt fa-2x text-purple-400"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Project Proposal (draft)</h3>
                                     <p class="text-gray-300 text-sm md:text-base">May 13, 2024</p>
@@ -221,7 +230,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="Final proposal review">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-check-square fa-lg md:fa-2x text-yellow-400"></i>
+                                <i class="fas fa-check-square fa-2x text-yellow-400"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Proposal (final)</h3>
                                     <p class="text-gray-300 text-sm md:text-base">August 16, 2024</p>
@@ -242,7 +251,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="First progress review">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-chart-line fa-lg md:fa-2x text-orange-400"></i>
+                                <i class="fas fa-chart-line fa-2x text-orange-400"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Progress Presentation-1</h3>
                                     <p class="text-gray-300 text-sm md:text-base">August 23, 2024</p>
@@ -263,7 +272,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="Checkpoint review">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-tasks fa-lg md:fa-2x text-red-400"></i>
+                                <i class="fas fa-tasks fa-2x text-red-400"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Checkpoint Presentation I</h3>
                                     <p class="text-gray-300 text-sm md:text-base">December 4-6, 2024</p>
@@ -284,7 +293,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="Research paper submission">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-book-open fa-lg md:fa-2x text-indigo-400"></i>
+                                <i class="fas fa-book-open fa-2x text-indigo-400"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Research Paper</h3>
                                     <p class="text-gray-300 text-sm md:text-base">December 20, 2024</p>
@@ -305,7 +314,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="Second progress review">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-chart-pie fa-lg md:fa-2x text-teal-400"></i>
+                                <i class="fas fa-chart-pie fa-2x text-teal-400"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Progress Presentation-2</h3>
                                     <p class="text-gray-300 text-sm md:text-base">March 11, 2025</p>
@@ -326,7 +335,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="Checkpoint review">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-clipboard-check fa-lg md:fa-2x text-pink-400"></i>
+                                <i class="fas fa-clipboard-check fa-2x text-pink-400"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Checkpoint Presentation II</h3>
                                     <p class="text-gray-300 text-sm md:text-base">March 17, 2025</p>
@@ -347,7 +356,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="Final submission preparation">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-file-upload fa-lg md:fa-2x text-lime-400"></i>
+                                <i class="fas fa-file-upload fa-2x text-lime-400"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Submission of RP - Acceptance & website</h3>
                                     <p class="text-gray-300 text-sm md:text-base">June 2, 2025</p>
@@ -368,7 +377,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="Final evaluation">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-check-double fa-lg md:fa-2x text-cyan-400"></i>
+                                <i class="fas fa-check-double fa-2x text-cyan-400"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Final Assessment</h3>
                                     <p class="text-gray-300 text-sm md:text-base">May 26-28, 2025</p>
@@ -389,7 +398,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="Oral defense">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-microphone-alt fa-lg md:fa-2x text-blue-600"></i>
+                                <i class="fas fa-microphone-alt fa-2x text-blue-600"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Viva</h3>
                                     <p class="text-gray-300 text-sm md:text-base">June 9, 2025</p>
@@ -410,7 +419,7 @@
                     <div class="tooltip tooltip-info tooltip-right" data-tip="Project logbook submission">
                         <div class="card bg-gray-800 p-3 md:p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-center space-x-2 md:space-x-4">
-                                <i class="fas fa-book fa-lg md:fa-2x text-gray-400"></i>
+                                <i class="fas fa-book fa-2x text-gray-400"></i>
                                 <div>
                                     <h3 class="text-lg md:text-xl font-semibold text-white">Logbook</h3>
                                     <p class="text-gray-300 text-sm md:text-base">June 9, 2025</p>
@@ -432,27 +441,27 @@
         <h2 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Tools and Technologies</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-microchip fa-2x md:fa-2x mb-2 md:mb-3 text-blue-400"></i>
+                <i class="fas fa-microchip fa-2x mb-2 md:mb-3 text-blue-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Hardware</h3>
                 <p class="text-sm md:text-base">ESP32 (sensors), Raspberry Pi (control), NVIDIA Jetson Nano (AI processing), 10 prototypes deployed.</p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-brain fa-2x md:fa-2x mb-2 md:mb-3 text-green-400"></i>
+                <i class="fas fa-brain fa-2x mb-2 md:mb-3 text-green-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">AI Frameworks</h3>
                 <p class="text-sm md:text-base">TensorFlow (CNNs for 1,000 horn samples), PyTorch (RNNs for lipreading dataset).</p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-code fa-2x md:fa-2x mb-2 md:mb-3 text-purple-400"></i>
+                <i class="fas fa-code fa-2x mb-2 md:mb-3 text-purple-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Software</h3>
                 <p class="text-sm md:text-base">React Native (UI), MQTT (real-time data), Git (version control), Firebase.</p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-cogs fa-2x md:fa-2x mb-2 md:mb-3 text-yellow-400"></i>
+                <i class="fas fa-cogs fa-2x mb-2 md:mb-3 text-yellow-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Algorithms</h3>
                 <p class="text-sm md:text-base">Time Difference of Arrival (TDOA) for directionality, validated in 50 trials.</p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-tools fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <i class="fas fa-tools fa-2x mb-2 md:mb-3 text-red-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Development Tools</h3>
                 <p class="text-sm md:text-base">VS Code (coding), Arduino IDE (ESP32), MATLAB (data analysis).</p>
             </div>
@@ -464,19 +473,15 @@
         <h2 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Achievements</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-trophy fa-2x md:fa-2x mb-2 md:mb-3 text-yellow-400"></i>
+                <i class="fas fa-trophy fa-2x mb-2 md:mb-3 text-yellow-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">ICAC 2025</h3>
                 <p class="text-sm md:text-base">One of our team research papers got accepted at 5th International Conference on Advancements in Computing 2025</p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-trophy fa-2x md:fa-2x mb-2 md:mb-3 text-yellow-400"></i>
+                <i class="fas fa-trophy fa-2x mb-2 md:mb-3 text-yellow-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">CCAI2025</h3>
                 <p class="text-sm md:text-base">One of our team research papers got accepted at 2025 IEEE the 5th International Conference on Computer Communication and Artificial Intelligence (CCAI)</p>
             </div>
-            
-            
-            
-            
         </div>
     </section>
 
@@ -484,153 +489,98 @@
     <section id="documents" class="section">
         <h2 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Documents</h2>
         <h3 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Proposal Reports</h3>
-
-
-
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <i class="fas fa-file-powerpoint fa-2x mb-2 md:mb-3 text-orange-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Proposal Presentation</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/ProposalReports/Proposal-Presentation_24-25J-132.pptx" class="text-blue-400 hover:underline" target="_blank">Download</a> (50 pages, covers all phases).</p>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/ProposalReports/Proposal-Presentation_24-25J-132.pptx" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (50 pages, covers all phases).</p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
-                <h3 class="text-lg md:text-xl font-semibold">Proposal-report_24-25J-132_IT21219566_Thathsara SMK</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/ProposalReports/Proposal-report_24-25J-132_IT21219566_Thathsara SMK.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (10 pages, design specs).</p>
+                <i class="fas fa-file-pdf fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <h3 class="text-lg md:text-xl font-semibold">Proposal-report_24-25J-132_IT21219566_Thathsara_SMK</h3>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/ProposalReports/Proposal-report_24-25J-132_IT21219566_Thathsara_SMK.pdf" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (10 pages, design specs).</p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
-                <h3 class="text-lg md:text-xl font-semibold">Proposal-report_24-25J-132_IT21278280_Fernando WTRP</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/ProposalReports/Proposal-report_24-25J-132_IT21278280_Fernando WTRP.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (10 pages, design specs).</p>
+                <i class="fas fa-file-pdf fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <h3 class="text-lg md:text-xl font-semibold">Proposal-report_24-25J-132_IT21278280_Fernando_WTRP</h3>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/ProposalReports/Proposal-report_24-25J-132_IT21278280_Fernando_WTRP.pdf" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (10 pages, design specs).</p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
-                <h3 class="text-lg md:text-xl font-semibold">Proposal-report_24-25J-132_IT21229084_Iroshan GHM</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/ProposalReports/Proposal-report_24-25J-132_IT21229084_Iroshan GHM.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (10 pages, design specs).</p>
+                <i class="fas fa-file-pdf fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <h3 class="text-lg md:text-xl font-semibold">Proposal-report_24-25J-132_IT21229084_Iroshan_GHM</h3>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/ProposalReports/Proposal-report_24-25J-132_IT21229084_Iroshan_GHM.pdf" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (10 pages, design specs).</p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
-                <h3 class="text-lg md:text-xl font-semibold">Proposal-report_24-25J-132_IT21388316_Rathnayake RMSN</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/ProposalReports/Proposal-report_24-25J-132_IT21388316_Rathnayake RMSN.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (10 pages, design specs).</p>
+                <i class="fas fa-file-pdf fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <h3 class="text-lg md:text-xl font-semibold">Proposal-report_24-25J-132_IT21388316_Rathnayake_RMSN</h3>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/ProposalReports/Proposal-report_24-25J-132_IT21388316_Rathnayake_RMSN.pdf" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (10 pages, design specs).</p>
             </div>
-            
         </div>
-
-
-<h3 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Progress Presentation 1</h3>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <h3 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Progress Presentation 1</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <i class="fas fa-file-powerpoint fa-2x mb-2 md:mb-3 text-orange-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">PP1-Presentation-slide_24-25J-132</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/ProgressPresentation1/PP1-Presentation-slide_24-25J-132.pptx" class="text-blue-400 hover:underline" target="_blank">Download</a> (50 pages, covers all phases).</p>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/ProgressPresentation1/PP1-Presentation-slide_24-25J-132.pptx" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (50 pages, covers all phases).</p>
             </div>
-            
-            
         </div>
-
-
-
-
         <h3 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Research Papers</h3>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <i class="fas fa-file-pdf fa-2x mb-2 md:mb-3 text-red-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Research-Paper_24-25J-132</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/ResearchPapers/Research-Paper_24-25J-132.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (50 pages, covers all phases).</p>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/ResearchPapers/Research-Paper_24-25J-132.pdf" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (50 pages, covers all phases).</p>
             </div>
-
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <i class="fas fa-file-pdf fa-2x mb-2 md:mb-3 text-red-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Real time Siren detection and haptic alert system for deaf drivers using edge ai and iot</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/ResearchPapers/Real time Siren detection and haptic alert system for deaf drivers using edge ai and iot.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (50 pages, covers all phases).</p>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/ResearchPapers/Real_time_Siren_detection_and_haptic_alert_system_for_deaf_drivers_using_edge_ai_and_iot.pdf" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (50 pages, covers all phases).</p>
             </div>
-
-    
-            
         </div>
-
-
-
-<h3 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Progress Presentation 02</h3>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <h3 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Progress Presentation 02</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <i class="fas fa-file-powerpoint fa-2x mb-2 md:mb-3 text-orange-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Progress Presentation 02</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/ProgressPresentation2/PP2-Presentation-slide_24-25J-132 (2).pptx" class="text-blue-400 hover:underline" target="_blank">Download</a> (50 pages, covers all phases).</p>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/ProgressPresentation2/PP2-Presentation-slide_24-25J-132_(2).pptx" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (50 pages, covers all phases).</p>
             </div>
-
-           
-
-            
-            
-            
         </div>
-
-
         <h3 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Final Reports</h3>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
-                <h3 class="text-lg md:text-xl font-semibold">24-25j-132_Group_Final_Report</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/FinalReports/24-25j-132_Group_Final_Report.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (50 pages, covers all phases).</p>
+                <i class="fas fa-file-pdf fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <h3 class="text-lg md:text-xl font-semibold">24-25J-132_Group_Final_Report</h3>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/FinalReports/24-25J-132_Group_Final_Report.pdf" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (50 pages, covers all phases).</p>
             </div>
-
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <i class="fas fa-file-pdf fa-2x mb-2 md:mb-3 text-red-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">IT21278280_Individual_FinalReport</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/FinalReports/IT21278280_Individual_FinalReport.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (50 pages, covers all phases).</p>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/FinalReports/IT21278280_Individual_FinalReport.pdf" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (50 pages, covers all phases).</p>
             </div>
-
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <i class="fas fa-file-pdf fa-2x mb-2 md:mb-3 text-red-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">IT21388316_IndividualReport</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/FinalReports/IT21388316_IndividualReport.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (50 pages, covers all phases).</p>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/FinalReports/IT21388316_IndividualReport.pdf" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (50 pages, covers all phases).</p>
             </div>
-
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
-                <h3 class="text-lg md:text-xl font-semibold">it21219566_Individual_Final_Report</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/FinalReports/it21219566_Individual_Final_Report.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (50 pages, covers all phases).</p>
+                <i class="fas fa-file-pdf fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <h3 class="text-lg md:text-xl font-semibold">IT21219566_Individual_Final_Report</h3>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/FinalReports/IT21219566_Individual_Final_Report.pdf" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (50 pages, covers all phases).</p>
             </div>
-
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <i class="fas fa-file-pdf fa-2x mb-2 md:mb-3 text-red-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">IT21229084_IndividualReport</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/FinalReports/IT21229084_IndividualReport.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (50 pages, covers all phases).</p>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/FinalReports/IT21229084_IndividualReport.pdf" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (50 pages, covers all phases).</p>
             </div>
-
-           
-
-            
-            
-            
         </div>
-
-        
-
-<h3 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Project Registration Documents</h3>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <h3 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Project Registration Documents</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-pdf fa-2x md:fa-2x mb-2 md:mb-3 text-red-400"></i>
+                <i class="fas fa-file-pdf fa-2x mb-2 md:mb-3 text-red-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">RETAF_24-25J-132</h3>
-                <p class="text-sm md:text-base"><a href="assets/pdfs/ProjectRegistrationDoc/RETAF_24-25J-132.pdf" class="text-blue-400 hover:underline" target="_blank">Download</a> (50 pages, covers all phases).</p>
+                <p class="text-sm md:text-base"><a href="assets/pdfs/ProjectRegistrationDocuments/RETAF_24-25J-132.pdf" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (50 pages, covers all phases).</p>
             </div>
-
-           
-
-            
-            
-            
         </div>
-
-
-
-        
     </section>
 
     <!-- Slides Section -->
@@ -638,34 +588,52 @@
         <h2 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Slides</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-powerpoint fa-2x md:fa-2x mb-2 md:mb-3 text-orange-400"></i>
+                <i class="fas fa-file-powerpoint fa-2x mb-2 md:mb-3 text-orange-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Proposal Presentation</h3>
-                <p class="text-sm md:text-base"><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (20 slides).</p>
+                <p class="text-sm md:text-base">
+                    <!-- TODO: Update link to actual file path -->
+                    <a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (20 slides).
+                </p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-powerpoint fa-2x md:fa-2x mb-2 md:mb-3 text-orange-400"></i>
+                <i class="fas fa-file-powerpoint fa-2x mb-2 md:mb-3 text-orange-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Progress Presentation-1</h3>
-                <p class="text-sm md:text-base"><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (15 slides, Aug 2024).</p>
+                <p class="text-sm md:text-base">
+                    <!-- TODO: Update link to actual file path -->
+                    <a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (15 slides, Aug 2024).
+                </p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-powerpoint fa-2x md:fa-2x mb-2 md:mb-3 text-orange-400"></i>
+                <i class="fas fa-file-powerpoint fa-2x mb-2 md:mb-3 text-orange-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Progress Presentation-2</h3>
-                <p class="text-sm md:text-base"><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (20 slides, Mar 2025).</p>
+                <p class="text-sm md:text-base">
+                    <!-- TODO: Update link to actual file path -->
+                    <a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (20 slides, Mar 2025).
+                </p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-powerpoint fa-2x md:fa-2x mb-2 md:mb-3 text-orange-400"></i>
+                <i class="fas fa-file-powerpoint fa-2x mb-2 md:mb-3 text-orange-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Final Presentation</h3>
-                <p class="text-sm md:text-base"><a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (30 slides, May 2025).</p>
+                <p class="text-sm md:text-base">
+                    <!-- TODO: Update link to actual file path -->
+                    <a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (30 slides, May 2025).
+                </p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-powerpoint fa-2x md:fa-2x mb-2 md:mb-3 text-orange-400"></i>
+                <i class="fas fa-file-powerpoint fa-2x mb-2 md:mb-3 text-orange-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Progress Presentation 02</h3>
-                <p class="text-sm md:text-base"><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a> (20 slides, Mar 2025).</p>
+                <p class="text-sm md:text-base">
+                    <!-- Note: Duplicate entry for Progress Presentation 02; verify if intentional -->
+                    <a href="assets/pdfs/ProgressPresentation2/PP2-Presentation-slide_24-25J-132_(2).pptx" class="text-blue-400 hover:underline" target="_blank" download>Download</a> (20 slides, Mar 2025).
+                </p>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <i class="fas fa-file-powerpoint fa-2x md:fa-2x mb-2 md:mb-3 text-orange-400"></i>
+                <i class="fas fa-file-powerpoint fa-2x mb-2 md:mb-3 text-orange-400"></i>
                 <h3 class="text-lg md:text-xl font-semibold">Poster</h3>
-                <p class="text-sm md:text-base"><a href="#" class="text-blue-400 hover:underline" target="_blank">Download</a> (A1 size, Jan 2025).</p>
+                <p class="text-sm md:text-base">
+                    <!-- TODO: Update link to actual file path -->
+                    <a href="#" class="text-blue-400 hover:underline" target="_blank">Pending</a> (A1 size, Jan 2025).
+                </p>
             </div>
         </div>
     </section>
@@ -675,28 +643,30 @@
         <h2 class="section-title text-2xl md:text-3xl font-bold mb-4 md:mb-6">Team</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <img src="https://via.placeholder.com/150" alt="Rusith Fernando" class="w-full h-24 md:h-40 object-cover rounded-t-lg">
+                <img src="https://via.placeholder.com/150" alt="Photo of Rusith Fernando" class="w-full h-24 md:h-40 object-cover rounded-t-lg">
                 <h3 class="text-lg md:text-xl font-semibold">Rusith Fernando (IT21278280)</h3>
-                <p class="text-sm md:text-base">Lead Developer, coded 60% of AI logic.</p>
-                <a href="#" class="text-blue-400 hover:underline text-sm md:text-base"><i class="fab fa-linkedin"></i></a>
+                <p class="text-sm md:text-base">Lead Developer, coded 60% of AI logic.</彼此
+
+System: logic.</p>
+                <a href="#" class="text-blue-400 hover:underline text-sm md:text-base"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <img src="https://via.placeholder.com/150" alt="Malith Iroshan" class="w-full h-24 md:h-40 object-cover rounded-t-lg">
+                <img src="https://via.placeholder.com/150" alt="Photo of Malith Iroshan" class="w-full h-24 md:h-40 object-cover rounded-t-lg">
                 <h3 class="text-lg md:text-xl font-semibold">Malith Iroshan (IT21229084)</h3>
                 <p class="text-sm md:text-base">AI Specialist, trained 1,000 horn samples.</p>
-                <a href="#" class="text-blue-400 hover:underline text-sm md:text-base"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-blue-400 hover:underline text-sm md:text-base"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <img src="https://via.placeholder.com/150" alt="Kulana Thathsara" class="w-full h-24 md:h-40 object-cover rounded-t-lg">
+                <img src="https://via.placeholder.com/150" alt="Photo of Kulana Thathsara" class="w-full h-24 md:h-40 object-cover rounded-t-lg">
                 <h3 class="text-lg md:text-xl font-semibold">Kulana Thathsara (IT21219566)</h3>
                 <p class="text-sm md:text-base">Hardware Engineer, built 10 prototypes.</p>
-                <a href="#" class="text-blue-400 hover:underline text-sm md:text-base"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-blue-400 hover:underline text-sm md:text-base"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <img src="https://via.placeholder.com/150" alt="Nirmala Rathnayaka" class="w-full h-24 md:h-40 object-cover rounded-t-lg">
+                <img src="https://via.placeholder.com/150" alt="Photo of Nirmala Rathnayaka" class="w-full h-24 md:h-40 object-cover rounded-t-lg">
                 <h3 class="text-lg md:text-xl font-semibold">Nirmala Rathnayaka (IT21388316)</h3>
                 <p class="text-sm md:text-base">UI/UX Designer, designed 5 interfaces.</p>
-                <a href="#" class="text-blue-400 hover:underline text-sm md:text-base"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-blue-400 hover:underline text-sm md:text-base"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
         <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg mt-4 md:mt-6">
@@ -710,9 +680,11 @@
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg">
                 <h3 class="text-lg md:text-xl font-semibold">Get in Touch</h3>
-                <input type="text" placeholder="Email address" class="w-full p-2 mb-2 bg-gray-700 text-white rounded text-sm md:text-base">
+                <label for="email-input" class="text-sm md:text-base">Email address</label>
+                <input type="email" id="email-input" placeholder="Email address" class="w-full p-2 mb-2 bg-gray-700 text-white rounded text-sm md:text-base">
                 <p class="text-xs md:text-sm mb-2">We'll never share your email with anyone else.</p>
-                <input type="text" placeholder="Inquiry" class="w-full p-2 mb-2 bg-gray-700 text-white rounded text-sm md:text-base">
+                <label for="inquiry-input" class="text-sm md:text-base">Inquiry</label>
+                <input type="text" id="inquiry-input" placeholder="Inquiry" class="w-full p-2 mb-2 bg-gray-700 text-white rounded text-sm md:text-base">
                 <button class="bg-blue-500 text-white p-2 rounded w-full text-sm md:text-base">Submit</button>
             </div>
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg">
@@ -724,8 +696,9 @@
             <div class="card bg-gray-800 p-3 md:p-4 text-gray-300 rounded-lg shadow-lg">
                 <h3 class="text-lg md:text-xl font-semibold">Newsletter</h3>
                 <p class="text-sm md:text-base">Subscribe for updates on our project.</p>
-                <input type="text" placeholder="Recipient's username" class="w-full p-2 mb-2 bg-gray-700 text-white rounded text-sm md:text-base">
-                <button class="bg-blue-500 text-white p-2 rounded w-full text-sm md:text-base"><i class="fas fa-paper-plane"></i></button>
+                <label for="newsletter-input" class="text-sm md:text-base">Recipient's username</label>
+                <input type="email" id="newsletter-input" placeholder="Recipient's username" class="w-full p-2 mb-2 bg-gray-700 text-white rounded text-sm md:text-base">
+                <button class="bg-blue-500 text-white p-2 rounded w-full text-sm md:text-base"><i class="fas fa-paper-plane"></i> Subscribe</button>
             </div>
         </div>
         <div class="mt-4 md:mt-6 text-center text-gray-400">
@@ -745,14 +718,21 @@
     </section>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+    <button class="back-to-top" onclick="scrollToTop()" aria-label="Scroll to top">↑</button>
 
     <!-- Footer -->
     <footer class="footer p-2 md:p-4 text-center text-gray-400 bg-gray-900">
         <p class="text-sm md:text-base">© 2025 RP Team, SLIIT. All rights reserved.</p>
     </footer>
 
+    <!-- Fallback JavaScript for scrollToTop -->
+    <script type="text/javascript">
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
     <!-- Custom JavaScript -->
-    <script src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
+```
