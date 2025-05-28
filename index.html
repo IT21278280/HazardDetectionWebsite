@@ -10,6 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS.js CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <style>
         /* Custom Gradient for Hero */
@@ -60,38 +63,89 @@
 </head>
 <body class="bg-slate-900 text-slate-300">
     <!-- Navigation Bar -->
-    <nav class="navbar sticky top-0 z-50 bg-indigo-800 p-4 md:p-6 text-white flex items-center justify-between shadow-lg">
-        <div class="flex items-center">
-            <img src="assets/images/logo.png" alt="Project Logo" class="h-10 md:h-12 mr-4">
-            <h1 class="text-xl md:text-2xl font-bold">Hazard Detection System</h1>
-        </div>
-        <ul class="flex flex-wrap space-x-2 md:space-x-6 text-sm md:text-base">
-            <li><a href="#home" class="nav-link hover:text-amber-400 transition-colors">Home</a></li>
-            <li><a href="#what-we-provide" class="nav-link hover:text-amber-400 transition-colors">What We Provide</a></li>
-            <li><a href="#introduction" class="nav-link hover:text-amber-400 transition-colors">Introduction</a></li>
-            <li><a href="#our-domain" class="nav-link hover:text-amber-400 transition-colors">Our Domain</a></li>
-            <li class="dropdown relative">
-                <a href="#milestones" class="nav-link hover:text-amber-400 transition-colors">Milestones</a>
-                <div class="dropdown-content absolute bg-indigo-900 text-white p-2 rounded-md shadow-lg mt-2">
-                    <a href="#brainstorming" class="dropdown-item block p-2 text-sm hover:bg-slate-700 rounded">Brainstorming Workshop</a>
-                    <a href="#proposal" class="dropdown-item block p-2 text-sm hover:bg-slate-700 rounded">Project Proposal</a>
-                    <a href="#progress1" class="dropdown-item block p-2 text-sm hover:bg-slate-700 rounded">Progress Presentation-1</a>
-                    <a href="#progress2" class="dropdown-item block p-2 text-sm hover:bg-slate-700 rounded">Progress Presentation-2</a>
-                    <a href="#final" class="dropdown-item block p-2 text-sm hover:bg-slate-700 rounded">Final Assessment</a>
-                    <a href="#viva" class="dropdown-item block p-2 text-sm hover:bg-slate-700 rounded">Viva</a>
-                </div>
-            </li>
-            <li><a href="#tools" class="nav-link hover:text-amber-400 transition-colors">Tools</a></li>
-            <li><a href="#achievements" class="nav-link hover:text-amber-400 transition-colors">Achievements</a></li>
-            <li><a href="#documents" class="nav-link hover:text-amber-400 transition-colors">Documents</a></li>
-            <li><a href="#slides" class="nav-link hover:text-amber-400 transition-colors">Slides</a></li>
-            <li><a href="#team" class="nav-link hover:text-amber-400 transition-colors">Team</a></li>
-            <li><a href="#contact" class="nav-link hover:text-amber-400 transition-colors">Contact</a></li>
-        </ul>
-    </nav>
+<nav class="navbar sticky top-0 z-50 bg-indigo-800 p-4 text-white flex items-center justify-between shadow-lg" data-aos="fade-down">
+    <div class="flex items-center">
+        <img src="assets/images/logo.png" alt="Project Logo" class="h-10 md:h-12 mr-3">
+        <h1 class="text-xl md:text-2xl font-bold">DeafConnect</h1>
+    </div>
+    <ul class="flex flex-wrap items-center gap-1 md:gap-2">
+        <li>
+            <a href="#home" class="flex items-center px-3 py-2 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white transition-colors text-sm md:text-base">
+                <i class="fas fa-home mr-1 md:mr-2 text-xs md:text-sm"></i>
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="#introduction" class="flex items-center px-3 py-2 rounded-full hover:bg-indigo-700/60 text-white transition-colors text-sm md:text-base">
+                <i class="fas fa-info-circle mr-1 md:mr-2 text-xs md:text-sm"></i>
+                <span>Intro</span>
+            </a>
+        </li>
+        <li>
+            <a href="#our-domain" class="flex items-center px-3 py-2 rounded-full hover:bg-indigo-700/60 text-white transition-colors text-sm md:text-base">
+                <i class="fas fa-globe mr-1 md:mr-2 text-xs md:text-sm"></i>
+                <span>Domain</span>
+            </a>
+        </li>
+        <li>
+            <a href="#milestones" class="flex items-center px-3 py-2 rounded-full hover:bg-indigo-700/60 text-white transition-colors text-sm md:text-base">
+                <i class="fas fa-flag-checkered mr-1 md:mr-2 text-xs md:text-sm"></i>
+                <span>Milestones</span>
+            </a>
+        </li>
+        <li>
+            <a href="#what-we-provide" class="flex items-center px-3 py-2 rounded-full hover:bg-indigo-700/60 text-white transition-colors text-sm md:text-base">
+                <i class="fas fa-gift mr-1 md:mr-2 text-xs md:text-sm"></i>
+                <span>Services</span>
+            </a>
+        </li>
+        <li>
+            <a href="#tools" class="flex items-center px-3 py-2 rounded-full hover:bg-indigo-700/60 text-white transition-colors text-sm md:text-base">
+                <i class="fas fa-tools mr-1 md:mr-2 text-xs md:text-sm"></i>
+                <span>Tools</span>
+            </a>
+        </li>
+        <li>
+            <a href="#gallery" class="flex items-center px-3 py-2 rounded-full hover:bg-indigo-700/60 text-white transition-colors text-sm md:text-base">
+                <i class="fas fa-images mr-1 md:mr-2 text-xs md:text-sm"></i>
+                <span>Gallery</span>
+            </a>
+        </li>
+        <li>
+            <a href="#achievements" class="flex items-center px-3 py-2 rounded-full hover:bg-indigo-700/60 text-white transition-colors text-sm md:text-base">
+                <i class="fas fa-trophy mr-1 md:mr-2 text-xs md:text-sm"></i>
+                <span>Achievements</span>
+            </a>
+        </li>
+        <li>
+            <a href="#documents" class="flex items-center px-3 py-2 rounded-full hover:bg-indigo-700/60 text-white transition-colors text-sm md:text-base">
+                <i class="fas fa-file-alt mr-1 md:mr-2 text-xs md:text-sm"></i>
+                <span>Docs</span>
+            </a>
+        </li>
+        <li>
+            <a href="#slides" class="flex items-center px-3 py-2 rounded-full hover:bg-indigo-700/60 text-white transition-colors text-sm md:text-base">
+                <i class="fas fa-presentation mr-1 md:mr-2 text-xs md:text-sm"></i>
+                <span>Slides</span>
+            </a>
+        </li>
+        <li>
+            <a href="#team" class="flex items-center px-3 py-2 rounded-full hover:bg-indigo-700/60 text-white transition-colors text-sm md:text-base">
+                <i class="fas fa-users mr-1 md:mr-2 text-xs md:text-sm"></i>
+                <span>Team</span>
+            </a>
+        </li>
+        <li>
+            <a href="#contact" class="flex items-center px-3 py-2 rounded-full hover:bg-indigo-700/60 text-white transition-colors text-sm md:text-base">
+                <i class="fas fa-envelope mr-1 md:mr-2 text-xs md:text-sm"></i>
+                <span>Contact</span>
+            </a>
+        </li>
+    </ul>
+</nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-gradient py-16 px-4 md:px-12 text-center">
+    <section id="home" class="hero-gradient py-16 px-4 md:px-12 text-center" data-aos="fade-up">
         <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Autonomous IoT-Enabled Hazard Detection System for Deaf Drivers</h1>
         <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-slate-200">
             Developed by Group 24-25J-132 at SLIIT, this project enhances safety for deaf drivers in Colombo's noisy urban environment (85 dB average). Achieving 94.2% horn detection accuracy, 10.8% WER in lipreading, and 96% behavior monitoring accuracy, it reduces response time by 1.2 seconds with real-time visual and tactile alerts. Tested in 50 urban scenarios and 100 driver simulations, it integrates CNNs, TDOA localization, and IoT for robust performance.
@@ -99,48 +153,56 @@
         <a href="#contact" class="bg-amber-400 text-slate-900 px-6 py-3 rounded-full font-semibold hover:bg-amber-500 transition-colors">Get in Touch</a>
     </section>
 
-    <!-- What We Provide Section -->
-    <section id="what-we-provide" class="py-12 px-4 md:px-12 bg-slate-800">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">What Do We Provide?</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
-                <i class="fas fa-bullseye fa-3x mb-4 text-teal-500"></i>
-                <h3 class="text-xl font-semibold text-white">Precision</h3>
-                <p class="text-base">94.2% horn detection accuracy using CNNs, validated across 500+ urban scenarios with 85 dB ambient noise.</p>
-            </div>
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
-                <i class="fas fa-shield-alt fa-3x mb-4 text-emerald-500"></i>
-                <h3 class="text-xl font-semibold text-white">Safety</h3>
-                <p class="text-base">Real-time alerts via LED displays and vibration motors, reducing response time by 1.2 seconds in 100 driver simulations.</p>
-            </div>
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
-                <i class="fas fa-universal-access fa-3x mb-4 text-indigo-500"></i>
-                <h3 class="text-xl font-semibold text-white">Accessibility</h3>
-                <p class="text-base">Custom interfaces with sign language integration (85% recognition rate) and tactile feedback for deaf users.</p>
-            </div>
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
-                <i class="fas fa-lightbulb fa-3x mb-4 text-amber-500"></i>
-                <h3 class="text-xl font-semibold text-white">Innovation</h3>
-                <p class="text-base">IoT-AI fusion with TDOA algorithms and LipCam, patent filed in March 2025, tested in 50 real-world trials.</p>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Introduction Section -->
-    <section id="introduction" class="py-12 px-4 md:px-12 bg-slate-900">
+    <section id="introduction" class="py-12 px-4 md:px-12 bg-slate-900" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Introduction</h2>
-        <div class="card bg-slate-700 p-6 rounded-lg max-w-4xl mx-auto">
+        <div class="card bg-slate-700 p-6 rounded-lg max-w-4xl mx-auto" data-aos="fade-left" data-aos-delay="200">
             <p class="text-base">
                 Deaf drivers in Colombo face heightened risks due to the city's 85 dB traffic noise, where auditory cues like horns and sirens are critical. Initiated in July 2024 by Group 24-25J-132 at SLIIT, this project addresses this challenge with an IoT-enabled hazard detection system. It integrates AI-driven horn detection (94.2% accuracy using CNNs), lipreading (10.8% WER via LipCam), and driver behavior monitoring (96% accuracy with sensor fusion). The system delivers visual (LED dashboard) and tactile (vibration motors) alerts, reducing response times by 1.2 seconds compared to baseline human reaction (2.5 seconds). Tested in 50 real-world urban scenarios and 100 simulated driver sessions, it supports 10+ vehicle types and operates reliably in 30–40°C conditions. The project aims to enhance road safety and accessibility for Sri Lanka’s 400,000+ deaf community members.
             </p>
         </div>
     </section>
 
+
+
+
+
+    <section id="project-components" class="py-12 px-4 md:px-12 bg-slate-800" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">Project Components</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div class="card bg-slate-700 p-6 text-center rounded-lg hover:scale-105 hover:shadow-[0_0_15px_rgba(255,99,71,0.3)] transition-all duration-300" data-aos="zoom-in-up" data-aos-duration="900" data-aos-delay="200">
+            <span class="text-4xl mb-4 text-red-500 block" data-aos="flip-up" data-aos-duration="600" data-aos-delay="300">🚨</span>
+            <h3 class="text-xl font-semibold text-white mb-2" data-aos="fade-right" data-aos-duration="700" data-aos-delay="400">Emergency Vehicle Detection</h3>
+            <p class="text-base text-slate-300" data-aos="fade-left" data-aos-duration="800" data-aos-delay="500">Detects sirens from ambulances, fire trucks, and police cars using AI and sensitive microphones. Delivers instant visual and haptic alerts to deaf drivers, ensuring safe and timely responses in noisy traffic.</p>
+        </div>
+        <div class="card bg-slate-700 p-6 text-center rounded-lg hover:scale-105 hover:shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all duration-300" data-aos="zoom-in-up" data-aos-duration="900" data-aos-delay="300">
+            <span class="text-4xl mb-4 text-amber-500 block" data-aos="flip-up" data-aos-duration="600" data-aos-delay="400">📣</span>
+            <h3 class="text-xl font-semibold text-white mb-2" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500">Vehicle Horn Detection</h3>
+            <p class="text-base text-slate-300" data-aos="fade-left" data-aos-duration="800" data-aos-delay="600">Identifies vehicle horn sounds and their direction with dual microphones and ML. Provides vibration and screen alerts, enhancing awareness for deaf drivers in loud urban settings.</p>
+        </div>
+        <div class="card bg-slate-700 p-6 text-center rounded-lg hover:scale-105 hover:shadow-[0_0_15px_rgba(20,184,166,0.3)] transition-all duration-300" data-aos="zoom-in-up" data-aos-duration="900" data-aos-delay="400">
+            <span class="text-4xl mb-4 text-teal-500 block" data-aos="flip-up" data-aos-duration="600" data-aos-delay="500">👁️‍🗨️</span>
+            <h3 class="text-xl font-semibold text-white mb-2" data-aos="fade-right" data-aos-duration="700" data-aos-delay="600">Driver Behavior Monitoring</h3>
+            <p class="text-base text-slate-300" data-aos="fade-left" data-aos-duration="800" data-aos-delay="700">Tracks driver actions via cameras and sensors, detecting texting, drowsiness, or lane drifting. Issues visual and haptic alerts to maintain focus and safety for deaf drivers.</p>
+        </div>
+        <div class="card bg-slate-700 p-6 text-center rounded-lg hover:scale-105 hover:shadow-[0_0_15px_rgba(244,63,94,0.3)] transition-all duration-300" data-aos="zoom-in-up" data-aos-duration="900" data-aos-delay="500">
+            <span class="text-4xl mb-4 text-rose-500 block" data-aos="flip-up" data-aos-duration="600" data-aos-delay="600">🆘</span>
+            <h3 class="text-xl font-semibold text-white mb-2" data-aos="fade-right" data-aos-duration="700" data-aos-delay="700">Emergency Support</h3>
+            <p class="text-base text-slate-300" data-aos="fade-left" data-aos-duration="800" data-aos-delay="800">Enables communication in crises via a mobile app with predefined messages and location sharing. Converts texts to speech, aiding deaf drivers in interacting with responders or bystanders.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
     <!-- Our Domain Section -->
-    <section id="our-domain" class="py-12 px-4 md:px-12 bg-slate-800">
+    <section id="our-domain" class="py-12 px-4 md:px-12 bg-slate-800" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Our Domain</h2>
         <div class="space-y-4 max-w-4xl mx-auto">
-            <div class="collapse collapse-arrow bg-slate-700 text-white">
+            <div class="collapse collapse-arrow bg-slate-700 text-white" data-aos="fade-left" data-aos-delay="200">
                 <input type="checkbox" id="literature-survey" />
                 <label for="literature-survey" class="collapse-title text-xl font-medium flex items-center">
                     <i class="fas fa-plus mr-2"></i> Literature Survey
@@ -151,7 +213,7 @@
                     </p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-slate-700 text-white">
+            <div class="collapse collapse-arrow bg-slate-700 text-white" data-aos="fade-left" data-aos-delay="300">
                 <input type="checkbox" id="research-gap" />
                 <label for="research-gap" class="collapse-title text-xl font-medium flex items-center">
                     <i class="fas fa-plus mr-2"></i> Research Gap
@@ -162,7 +224,7 @@
                     </p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-slate-700 text-white">
+            <div class="collapse collapse-arrow bg-slate-700 text-white" data-aos="fade-left" data-aos-delay="400">
                 <input type="checkbox" id="problem-statement" />
                 <label for="problem-statement" class="collapse-title text-xl font-medium flex items-center">
                     <i class="fas fa-plus mr-2"></i> Problem Statement
@@ -173,7 +235,7 @@
                     </p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-slate-700 text-white">
+            <div class="collapse collapse-arrow bg-slate-700 text-white" data-aos="fade-left" data-aos-delay="500">
                 <input type="checkbox" id="objectives" />
                 <label for="objectives" class="collapse-title text-xl font-medium flex items-center">
                     <i class="fas fa-plus mr-2"></i> Objectives
@@ -189,7 +251,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-slate-700 text-white">
+            <div class="collapse collapse-arrow bg-slate-700 text-white" data-aos="fade-left" data-aos-delay="600">
                 <input type="checkbox" id="methodology" />
                 <label for="methodology" class="collapse-title text-xl font-medium flex items-center">
                     <i class="fas fa-plus mr-2"></i> Methodology
@@ -200,7 +262,7 @@
                     </p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-slate-700 text-white">
+            <div class="collapse collapse-arrow bg-slate-700 text-white" data-aos="fade-left" data-aos-delay="700">
                 <input type="checkbox" id="technology" />
                 <label for="technology" class="collapse-title text-xl font-medium flex items-center">
                     <i class="fas fa-plus mr-2"></i> Technology
@@ -214,162 +276,210 @@
         </div>
     </section>
 
+    <!-- MODALS -->
+    <div id="milestone-modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-xl p-6 relative">
+            <button id="close-modal" class="absolute top-3 right-4 text-gray-600 hover:text-red-600 text-xl">×</button>
+            <h3 class="text-2xl font-bold mb-2 text-slate-900" id="modal-title">Milestone Title</h3>
+            <p class="text-gray-700" id="modal-description">Full milestone description will appear here when an icon is clicked.</p>
+        </div>
+    </div>
+
     <!-- Milestones Section -->
-    <section id="milestones" class="py-12 px-4 md:px-12 bg-slate-900">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Milestones</h2>
-        <ul class="timeline timeline-vertical timeline-snap-icon max-w-4xl mx-auto px-4">
-            <li class="milestone-item">
-                <div class="timeline-start w-full md:w-1/2">
-                    <div class="tooltip tooltip-info tooltip-right" data-tip="Initial idea generation session">
-                        <div class="card bg-slate-700 p-4 rounded-xl">
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-lightbulb fa-2x text-teal-500"></i>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-white">Brainstorming Workshop</h3>
-                                    <p class="text-slate-300">July 25, 2024</p>
-                                    <p class="text-slate-400 text-sm">Generated 15+ ideas, selected IoT-AI integration, faced hardware sourcing delays (2 weeks). Conducted SWOT analysis and finalized deaf driver focus.</p>
-                                </div>
+    <section id="milestones" class="py-16 px-4 md:px-12 bg-slate-900" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Milestones</h2>
+        <ul class="relative border-l-4 border-indigo-500 max-w-5xl mx-auto space-y-16">
+            <li class="relative pl-10 group" data-aos="fade-left" data-aos-delay="200">
+                <div class="absolute top-0 left-0 w-5 h-5 bg-indigo-500 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
+                <div class="bg-slate-700 p-6 rounded-2xl shadow-xl transform transition duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start gap-5">
+                        <div class="relative">
+                            <i class="fas fa-lightbulb fa-2x text-teal-400 cursor-pointer tooltip-icon" 
+                               data-title="Brainstorming Workshop" 
+                               data-description="Generated 15+ ideas, selected IoT-AI integration, faced hardware sourcing delays (2 weeks). Conducted SWOT analysis and finalized deaf driver focus."></i>
+                            <div class="absolute hidden group-hover:block bg-black text-white text-xs rounded px-2 py-1 bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                                Click for details
                             </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white">Brainstorming Workshop</h3>
+                            <p class="text-slate-300 mb-1">July 25, 2024</p>
+                            <p class="text-slate-400 text-sm">Idea generation, SWOT analysis, finalized deaf driver focus.</p>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-middle">
-                    <i class="fas fa-circle fa-xs text-teal-500"></i>
-                </div>
-                <hr class="bg-teal-500"/>
             </li>
-            <li class="milestone-item">
-                <div class="timeline-start w-full md:w-1/2">
-                    <div class="tooltip tooltip-info tooltip-right" data-tip="Project scope and plan submission">
-                        <div class="card bg-slate-700 p-4 rounded-xl">
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-file-alt fa-2x text-indigo-500"></i>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-white">Project Proposal</h3>
-                                    <p class="text-slate-300">August 10, 2024</p>
-                                    <p class="text-slate-400 text-sm">Submitted 20-page proposal, defined 6 objectives, approved with minor revisions (1-week turnaround). Allocated $500 budget for hardware.</p>
-                                </div>
+            <li class="relative pl-10 group" data-aos="fade-left" data-aos-delay="300">
+                <div class="absolute top-0 left-0 w-5 h-5 bg-indigo-500 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
+                <div class="bg-slate-700 p-6 rounded-2xl shadow-xl transform transition duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start gap-5">
+                        <div class="relative">
+                            <i class="fas fa-file-alt fa-2x text-indigo-400 cursor-pointer tooltip-icon"
+                               data-title="Project Proposal"
+                               data-description="Submitted 20-page proposal, defined 6 objectives, approved with minor revisions (1-week turnaround). Allocated $500 budget for hardware."></i>
+                            <div class="absolute hidden group-hover:block bg-black text-white text-xs rounded px-2 py-1 bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                                Click for details
                             </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white">Project Proposal</h3>
+                            <p class="text-slate-300 mb-1">August 10, 2024</p>
+                            <p class="text-slate-400 text-sm">Proposal submitted and approved with minor revisions.</p>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-middle">
-                    <i class="fas fa-circle fa-xs text-indigo-500"></i>
-                </div>
-                <hr class="bg-indigo-500"/>
             </li>
-            <li class="milestone-item">
-                <div class="timeline-start w-full md:w-1/2">
-                    <div class="tooltip tooltip-info tooltip-right" data-tip="First progress update">
-                        <div class="card bg-slate-700 p-4 rounded-xl">
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-chart-line fa-2x text-emerald-500"></i>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-white">Progress Presentation-1</h3>
-                                    <p class="text-slate-300">October 5, 2024</p>
-                                    <p class="text-slate-400 text-sm">Presented horn detection model (90% accuracy), faced challenges with TDOA calibration (10° error). Received feedback to optimize latency.</p>
-                                </div>
+            <li class="relative pl-10 group" data-aos="fade-left" data-aos-delay="400">
+                <div class="absolute top-0 left-0 w-5 h-5 bg-indigo-500 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
+                <div class="bg-slate-700 p-6 rounded-2xl shadow-xl transform transition duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start gap-5">
+                        <div class="relative">
+                            <i class="fas fa-chart-line fa-2x text-emerald-400 cursor-pointer tooltip-icon"
+                               data-title="Progress Presentation-1"
+                               data-description="Presented horn detection model (90% accuracy), faced challenges with TDOA calibration (10° error). Received feedback to optimize latency."></i>
+                            <div class="absolute hidden group-hover:block bg-black text-white text-xs rounded px-2 py-1 bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                                Click for details
                             </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white">Progress Presentation-1</h3>
+                            <p class="text-slate-300 mb-1">October 5, 2024</p>
+                            <p class="text-slate-400 text-sm">Showcased initial horn detection results.</p>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-middle">
-                    <i class="fas fa-circle fa-xs text-emerald-500"></i>
-                </div>
-                <hr class="bg-emerald-500"/>
             </li>
-            <li class="milestone-item">
-                <div class="timeline-start w-full md:w-1/2">
-                    <div class="tooltip tooltip-info tooltip-right" data-tip="Second progress update">
-                        <div class="card bg-slate-700 p-4 rounded-xl">
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-chart-bar fa-2x text-amber-500"></i>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-white">Progress Presentation-2</h3>
-                                    <p class="text-slate-300">December 15, 2024</p>
-                                    <p class="text-slate-400 text-sm">Showcased integrated system (93% accuracy), LipCam at 12% WER. Addressed latency issues (0.4s achieved). Added 5 prototypes.</p>
-                                </div>
+            <li class="relative pl-10 group" data-aos="fade-left" data-aos-delay="500">
+                <div class="absolute top-0 left-0 w-5 h-5 bg-indigo-500 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
+                <div class="bg-slate-700 p-6 rounded-2xl shadow-xl transform transition duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start gap-5">
+                        <div class="relative">
+                            <i class="fas fa-chart-bar fa-2x text-amber-400 cursor-pointer tooltip-icon"
+                               data-title="Progress Presentation-2"
+                               data-description="Showcased integrated system (93% accuracy), LipCam at 12% WER. Addressed latency issues (0.4s achieved). Added 5 prototypes."></i>
+                            <div class="absolute hidden group-hover:block bg-black text-white text-xs rounded px-2 py-1 bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                                Click for details
                             </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white">Progress Presentation-2</h3>
+                            <p class="text-slate-300 mb-1">December 15, 2024</p>
+                            <p class="text-slate-400 text-sm">Demonstrated integrated system and prototypes.</p>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-middle">
-                    <i class="fas fa-circle fa-xs text-amber-500"></i>
-                </div>
-                <hr class="bg-amber-500"/>
             </li>
-            <li class="milestone-item">
-                <div class="timeline-start w-full md:w-1/2">
-                    <div class="tooltip tooltip-info tooltip-right" data-tip="Final system evaluation">
-                        <div class="card bg-slate-700 p-4 rounded-xl">
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-check-circle fa-2x text-rose-500"></i>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-white">Final Assessment</h3>
-                                    <p class="text-slate-300">February 20, 2025</p>
-                                    <p class="text-slate-400 text-sm">Demonstrated 94.2% accuracy, 10.8% WER, 96% behavior monitoring in 50 trials. Achieved 90% user satisfaction in 100 simulations.</p>
-                                </div>
+            <li class="relative pl-10 group" data-aos="fade-left" data-aos-delay="600">
+                <div class="absolute top-0 left-0 w-5 h-5 bg-indigo-500 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
+                <div class="bg-slate-700 p-6 rounded-2xl shadow-xl transform transition duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start gap-5">
+                        <div class="relative">
+                            <i class="fas fa-check-circle fa-2x text-rose-400 cursor-pointer tooltip-icon"
+                               data-title="Final Assessment"
+                               data-description="Demonstrated 94.2% accuracy, 10.8% WER, 96% behavior monitoring in 50 trials. Achieved 90% user satisfaction in 100 simulations."></i>
+                            <div class="absolute hidden group-hover:block bg-black text-white text-xs rounded px-2 py-1 bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                                Click for details
                             </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white">Final Assessment</h3>
+                            <p class="text-slate-300 mb-1">February 20, 2025</p>
+                            <p class="text-slate-400 text-sm">Presented final system results and user feedback.</p>
                         </div>
                     </div>
                 </div>
-                <div class="timeline-middle">
-                    <i class="fas fa-circle fa-xs text-rose-500"></i>
-                </div>
-                <hr class="bg-rose-500"/>
             </li>
-            <li class="milestone-item">
-                <div class="timeline-start w-full md:w-1/2">
-                    <div class="tooltip tooltip-info tooltip-right" data-tip="Oral defense and Q&A">
-                        <div class="card bg-slate-700 p-4 rounded-xl">
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-microphone fa-2x text-purple-500"></i>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-white">Viva</h3>
-                                    <p class="text-slate-300">March 10, 2025</p>
-                                    <p class="text-slate-400 text-sm">Defended project, addressed scalability queries (10+ vehicle types). Secured 85/100 score, recommended for patent filing.</p>
-                                </div>
+            <li class="relative pl-10 group" data-aos="fade-left" data-aos-delay="700">
+                <div class="absolute top-0 left-0 w-5 h-5 bg-indigo-500 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
+                <div class="bg-slate-700 p-6 rounded-2xl shadow-xl transform transition duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start gap-5">
+                        <div class="relative">
+                            <i class="fas fa-microphone fa-2x text-purple-400 cursor-pointer tooltip-icon"
+                               data-title="Viva"
+                               data-description="Defended project, addressed scalability queries (10+ vehicle types). Secured 85/100 score, recommended for patent filing."></i>
+                            <div class="absolute hidden group-hover:block bg-black text-white text-xs rounded px-2 py-1 bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap">
+                                Click for details
                             </div>
                         </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-white">Viva</h3>
+                            <p class="text-slate-300 mb-1">March 10, 2025</p>
+                            <p class="text-slate-400 text-sm">Oral defense and project scalability discussion.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-middle">
-                    <i class="fas fa-circle fa-xs text-purple-500"></i>
                 </div>
             </li>
         </ul>
     </section>
 
+
+
+
+<!-- What We Provide Section -->
+    <section id="what-we-provide" class="py-12 px-4 md:px-12 bg-slate-800" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">What Do We Provide?</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-bullseye fa-3x mb-4 text-teal-500"></i>
+                <h3 class="text-xl font-semibold text-white">Precision</h3>
+                <p class="text-base">94.2% horn detection accuracy using CNNs, validated across 500+ urban scenarios with 85 dB ambient noise.</p>
+            </div>
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-shield-alt fa-3x mb-4 text-emerald-500"></i>
+                <h3 class="text-xl font-semibold text-white">Safety</h3>
+                <p class="text-base">Real-time alerts via LED displays and vibration motors, reducing response time by 1.2 seconds in 100 driver simulations.</p>
+            </div>
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fas fa-universal-access fa-3x mb-4 text-indigo-500"></i>
+                <h3 class="text-xl font-semibold text-white">Accessibility</h3>
+                <p class="text-base">Custom interfaces with sign language integration (85% recognition rate) and tactile feedback for deaf users.</p>
+            </div>
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="500">
+                <i class="fas fa-lightbulb fa-3x mb-4 text-amber-500"></i>
+                <h3 class="text-xl font-semibold text-white">Innovation</h3>
+                <p class="text-base">IoT-AI fusion with TDOA algorithms and LipCam, patent filed in March 2025, tested in 50 real-world trials.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    
     <!-- Tools and Technologies Section -->
-    <section id="tools" class="py-12 px-4 md:px-12 bg-slate-800">
+    <section id="tools" class="py-12 px-4 md:px-12 bg-slate-800" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Tools and Technologies</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div class="card bg-slate-700 p-6 rounded-lg">
+            <div class="card bg-slate-700 p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-microchip fa-3x mb-4 text-indigo-500"></i>
                 <h3 class="text-xl font-semibold text-white">Hardware</h3>
                 <p class="text-base">ESP32 (4 MEMS microphones, 10ms latency), Raspberry Pi 4 (2GB RAM, control), NVIDIA Jetson Nano (4GB, AI processing), vibration motors (5V), LED displays (128x64px), 10 prototypes deployed in 30–40°C conditions.</p>
             </div>
-            <div class="card bg-slate-700 p-6 rounded-lg">
+            <div class="card bg-slate-700 p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="300">
                 <i class="fas fa-code fa-3x mb-4 text-teal-500"></i>
                 <h3 class="text-xl font-semibold text-white">Software</h3>
                 <p class="text-base">Python 3.9 (core), TensorFlow 2.10 (CNNs), OpenCV 4.5 (LipCam), Flask 2.0 (backend), MQTT 1.6 (IoT communication), Jupyter for prototyping, VS Code for development.</p>
             </div>
-            <div class="card bg-slate-700 p-6 rounded-lg">
+            <div class="card bg-slate-700 p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="400">
                 <i class="fas fa-cogs fa-3x mb-4 text-amber-500"></i>
                 <h3 class="text-xl font-semibold text-white">AI Models</h3>
                 <p class="text-base">CNNs for horn detection (94.2% accuracy, 0.3s latency), LSTM-based LipCam (10.8% WER, 20–100 lux), sensor-fusion for behavior monitoring (96% accuracy, ESP32).</p>
             </div>
-            <div class="card bg-slate-700 p-6 rounded-lg">
+            <div class="card bg-slate-700 p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="500">
                 <i class="fas fa-network-wired fa-3x mb-4 text-emerald-500"></i>
                 <h3 class="text-xl font-semibold text-white">IoT Protocols</h3>
                 <p class="text-base">MQTT for real-time data transfer (10ms latency), TDOA for sound localization (8° precision), Wi-Fi 802.11n for connectivity, tested in 50 urban scenarios.</p>
             </div>
-            <div class="card bg-slate-700 p-6 rounded-lg">
+            <div class="card bg-slate-700 p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="600">
                 <i class="fas fa-vial fa-3x mb-4 text-rose-500"></i>
                 <h3 class="text-xl font-semibold text-white">Testing Tools</h3>
                 <p class="text-base">MATLAB for signal processing, SciPy for ANOVA, ROC curves for validation, Postman for API testing, 100 simulations and 50 real-world trials conducted.</p>
             </div>
-            <div class="card bg-slate-700 p-6 rounded-lg">
+            <div class="card bg-slate-700 p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="700">
                 <i class="fas fa-book fa-3x mb-4 text-purple-500"></i>
                 <h3 class="text-xl font-semibold text-white">Documentation</h3>
                 <p class="text-base">LaTeX for reports (50+ pages), PowerPoint for slides (100+ total), GitHub for version control (500+ commits), Jira for project tracking (20 sprints).</p>
@@ -377,181 +487,440 @@
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="py-12 px-4 md:px-12 bg-slate-900">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Achievements</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div class="card bg-slate-700 p-6 rounded-lg">
-                <i class="fas fa-trophy fa-3x mb-4 text-amber-500"></i>
-                <h3 class="text-xl font-semibold text-white">ICAC 2025</h3>
-                <p class="text-base">Paper “IoT-AI Hazard Detection for Deaf Drivers” accepted at the 5th International Conference on Advancements in Computing, December 2025, with 85% reviewer score.</p>
+
+
+    <!-- Gallery Section -->
+<section id="gallery" class="py-12 px-6 md:px-12 bg-slate-800" data-aos="fade-up" data-aos-duration="1000">
+    <div class="max-w-5xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Gallery</h2>
+            <p class="text-lg text-slate-300 max-w-3xl mx-auto">
+                Images from our research Project and field demonstrations
+            </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Image 1 -->
+            <div class="group" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                <img src="assets/images/gallery/hardwaresetup.jpg" alt="IoT prototype" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md border border-indigo-600/20 hover:border-amber-400 hover:scale-105 hover:brightness-110 transition-all duration-300">
+                <p class="text-center text-sm text-slate-300 mt-2 group-hover:text-amber-400">IoT Setup 1</p>
             </div>
-            <div class="card bg-slate-700 p-6 rounded-lg">
-                <i class="fas fa-trophy fa-3x mb-4 text-amber-500"></i>
-                <h3 class="text-xl font-semibold text-white">CCAI 2025</h3>
-                <p class="text-base">Paper “Real-Time Lipreading and Horn Detection for Accessibility” accepted at the IEEE 5th International Conference on Computer Communication and AI, May 2025.</p>
+
+            <!-- Image 2 -->
+            <div class="group" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                <img src="assets/images/gallery/hardwaresetup2.jpg" alt="IoT prototype" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md border border-indigo-600/20 hover:border-amber-400 hover:scale-105 hover:brightness-110 transition-all duration-300">
+                <p class="text-center text-sm text-slate-300 mt-2 group-hover:text-amber-400">IoT Setup 2</p>
             </div>
-            <div class="card bg-slate-700 p-6 rounded-lg">
-                <i class="fas fa-trophy fa-3x mb-4 text-amber-500"></i>
-                <h3 class="text-xl font-semibold text-white">SLIIT Innovation Award</h3>
-                <p class="text-base">Won 1st place in SLIIT’s 2025 Innovation Challenge for assistive technology, awarded March 2025, with $1000 prize.</p>
+
+            <div class="group" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                <img src="assets/images/gallery/hardwaresetup3.png" alt="IoT prototype" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md border border-indigo-600/20 hover:border-amber-400 hover:scale-105 hover:brightness-110 transition-all duration-300">
+                <p class="text-center text-sm text-slate-300 mt-2 group-hover:text-amber-400">IoT Setup 3</p>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="group" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                <img src="assets/images/gallery/sign.png" alt="Sign language interface" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md border border-indigo-600/20 hover:border-amber-400 hover:scale-105 hover:brightness-110 transition-all duration-300">
+                <p class="text-center text-sm text-slate-300 mt-2 group-hover:text-amber-400">Sign Language Interface</p>
+            </div>
+
+            <div class="group" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                <img src="assets/images/gallery/driverbehavior.png" alt="Sign language interface" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md border border-indigo-600/20 hover:border-amber-400 hover:scale-105 hover:brightness-110 transition-all duration-300">
+                <p class="text-center text-sm text-slate-300 mt-2 group-hover:text-amber-400">Driver Behavior Interface</p>
+            </div>
+
+
+           
+
+            <!-- Image 5 -->
+            <div class="group" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+                <img src="assets/images/gallery/ui2.png" alt="In-vehicle testing" 
+                     class="w-full h-64 object-cover rounded-lg shadow-md border border-indigo-600/20 hover:border-amber-400 hover:scale-105 hover:brightness-110 transition-all duration-300">
+                <p class="text-center text-sm text-slate-300 mt-2 group-hover:text-amber-400">In-Vehicle Testing</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- Achievements Section -->
+<section id="achievements" class="py-16 px-4 md:px-12 bg-gradient-to-b from-slate-900 to-slate-800" data-aos="fade-up" data-aos-delay="100">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-indigo-400 font-semibold tracking-wider">OUR SUCCESS STORIES</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Recognized Achievements</h2>
+            <div class="w-20 h-1 bg-indigo-500 mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Achievement 1 -->
+            <div class="group relative bg-slate-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-indigo-500" data-aos="zoom-in" data-aos-delay="200">
+                <div class="absolute -top-6 -left-6 w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-trophy text-white text-xl"></i>
+                </div>
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-calendar-alt text-indigo-400 mr-3"></i>
+                    <span class="text-sm font-medium text-slate-400">December 2025</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">ICAC 2025</h3>
+                <p class="text-slate-300 mb-4">Paper titled <span class="font-medium text-white">"IoT-AI Hazard Detection for Deaf Drivers"</span> was accepted at the 5th International Conference on Advancements in Computing.</p>
+                
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-amber-400 mr-2"></i>
+                        <span class="text-sm text-slate-300">85% reviewer score (Excellent)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-users text-indigo-400 mr-2"></i>
+                        <span class="text-sm text-slate-300">Featured in keynote session</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-quote-left text-slate-500 mr-2"></i>
+                        <span class="text-sm text-slate-300 italic">"Innovative approach to accessibility challenges"</span>
+                    </div>
+                </div>
+                
+                <div class="mt-6 pt-4 border-t border-slate-700">
+                    <a href="#" class="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium">
+                        View Certificate
+                        <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Achievement 2 -->
+            <div class="group relative bg-slate-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-indigo-500" data-aos="zoom-in" data-aos-delay="250">
+                <div class="absolute -top-6 -left-6 w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-award text-white text-xl"></i>
+                </div>
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-calendar-alt text-indigo-400 mr-3"></i>
+                    <span class="text-sm font-medium text-slate-400">May 2025</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">CCAI 2025</h3>
+                <p class="text-slate-300 mb-4">Our research on <span class="font-medium text-white">"Real-Time Lipreading and Horn Detection for Accessibility"</span> was published in IEEE's 5th International Conference on Computer Communication and AI.</p>
+                
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-medal text-amber-400 mr-2"></i>
+                        <span class="text-sm text-slate-300">Best Student Paper Award nominee</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-download text-indigo-400 mr-2"></i>
+                        <span class="text-sm text-slate-300">250+ downloads in first month</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-quote-left text-slate-500 mr-2"></i>
+                        <span class="text-sm text-slate-300 italic">"Practical implementation with measurable impact"</span>
+                    </div>
+                </div>
+                
+                <div class="mt-6 pt-4 border-t border-slate-700 flex justify-between items-center">
+                    <a href="#" class="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium">
+                        View Publication
+                        <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                    <span class="text-xs bg-indigo-900 text-indigo-300 px-2 py-1 rounded">IEEE Xplore</span>
+                </div>
+            </div>
+
+            <!-- Achievement 3 -->
+            <div class="group relative bg-slate-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-indigo-500" data-aos="zoom-in" data-aos-delay="300">
+                <div class="absolute -top-6 -left-6 w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-microphone text-white text-xl"></i>
+                </div>
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-calendar-alt text-indigo-400 mr-3"></i>
+                    <span class="text-sm font-medium text-slate-400">August 2025</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">MobiApps 2025</h3>
+                <p class="text-slate-300 mb-4">Selected to present our mobile application <span class="font-medium text-white">"DeafConnect: Real-Time Accessibility Companion"</span> at the International Conference on Mobile Applications.</p>
+                
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-lightbulb text-amber-400 mr-2"></i>
+                        <span class="text-sm text-slate-300">Innovation Showcase finalist</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-handshake text-indigo-400 mr-2"></i>
+                        <span class="text-sm text-slate-300">3 partnership inquiries</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-quote-left text-slate-500 mr-2"></i>
+                        <span class="text-sm text-slate-300 italic">"Exceptional user experience design"</span>
+                    </div>
+                </div>
+                
+                <div class="mt-6 pt-4 border-t border-slate-700">
+                    <a href="#" class="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium">
+                        View Demo Video
+                        <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </section>
+
+        <!-- Additional Recognition -->
+        <div class="mt-16 bg-slate-800/50 rounded-xl p-8 border border-slate-700" data-aos="fade-up" data-aos-delay="400">
+            <h3 class="text-2xl font-bold text-white mb-6 text-center">Additional Recognition</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="flex items-start p-4 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-colors">
+                    <div class="bg-indigo-600/20 p-3 rounded-full mr-4">
+                        <i class="fas fa-graduation-cap text-indigo-400"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-white">SLIIT Research Partnership</h4>
+                        <p class="text-sm text-slate-300 mt-1">Collaboration with SLIIT Computer Vision Lab for prototype development</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-4 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-colors">
+                    <div class="bg-amber-600/20 p-3 rounded-full mr-4">
+                        <i class="fas fa-newspaper text-amber-400"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-white">Tech Magazine Feature</h4>
+                        <p class="text-sm text-slate-300 mt-1">Featured in "Emerging Technologies in Accessibility" cover story</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-4 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-colors">
+                    <div class="bg-green-600/20 p-3 rounded-full mr-4">
+                        <i class="fas fa-users text-green-400"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-white">Community Impact Award</h4>
+                        <p class="text-sm text-slate-300 mt-1">Recognized by Sri Lanka Deaf Federation for social impact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Documents Section -->
-    <section id="documents" class="py-12 px-4 md:px-12 bg-slate-800">
+    <section id="documents" class="py-12 px-4 md:px-12 bg-slate-800" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Documents</h2>
         <h3 class="text-2xl font-bold text-white mb-6">Final Reports</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-file-pdf fa-3x mb-4 text-rose-500"></i>
                 <h3 class="text-xl font-semibold text-white">Group Final Report</h3>
-                <p class="text-base mb-4">50 pages, covers methodology, results, and 50 urban trials.</p>
+                <p class="text-base mb-4">.....</p>
                 <a href="assets/pdfs/FinalReports/24-25j-132_Group_Final_Report.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
             </div>
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="300">
                 <i class="fas fa-file-pdf fa-3x mb-4 text-rose-500"></i>
                 <h3 class="text-xl font-semibold text-white">Individual Report – Rusith</h3>
-                <p class="text-base mb-4">15 pages, focuses on AI model development.</p>
-                <a href="assets/pdfs/FinalReports/24-25j-132_Rusith_Individual_Report.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
+                <p class="text-base mb-4">.....</p>
+                <a href="assets/pdfs/FinalReports/final_report_rusith.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
             </div>
-            <!-- Add remaining individual reports for other team members -->
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-file-pdf fa-3x mb-4 text-rose-500"></i>
+                <h3 class="text-xl font-semibold text-white">Individual Report – Malith</h3>
+                <p class="text-base mb-4">.....</p>
+                <a href="assets/pdfs/FinalReports/final_report_malith.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
+            </div>
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-file-pdf fa-3x mb-4 text-rose-500"></i>
+                <h3 class="text-xl font-semibold text-white">Individual Report – Nirmala</h3>
+                <p class="text-base mb-4">.....</p>
+                <a href="assets/pdfs/FinalReports/final_report_nirmala.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
+            </div>
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fas fa-file-pdf fa-3x mb-4 text-rose-500"></i>
+                <h3 class="text-xl font-semibold text-white">Individual Report – Kulana</h3>
+                <p class="text-base mb-4">.....</p>
+                <a href="assets/pdfs/FinalReports/final_report_thathsara.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
+            </div>
+            
+             
         </div>
         <h3 class="text-2xl font-bold text-white mb-6 mt-8">Proposal Reports</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-file-pdf fa-3x mb-4 text-rose-500"></i>
-                <h3 class="text-xl font-semibold text-white">Project Proposal</h3>
-                <p class="text-base mb-4">20 pages, outlines 6 objectives and $500 budget.</p>
-                <a href="assets/pdfs/ProposalReports/24-25j-132_Project_Proposal.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
+                <h3 class="text-xl font-semibold text-white">Project Proposal - IT21388316</h3>
+                <p class="text-base mb-4">.....</p>
+                <a href="assets/pdfs/ProposalReports/Proposal_Report_IT21388316.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
+            </div>
+            
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-file-pdf fa-3x mb-4 text-rose-500"></i>
+                <h3 class="text-xl font-semibold text-white">Project Proposal - IT21278280</h3>
+                <p class="text-base mb-4">.....</p>
+                <a href="assets/pdfs/ProposalReports/Proposal_Report_IT21278280.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
+            </div>
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-file-pdf fa-3x mb-4 text-rose-500"></i>
+                <h3 class="text-xl font-semibold text-white">Project Proposal - IT21219566</h3>
+                <p class="text-base mb-4">.....</p>
+                <a href="assets/pdfs/ProposalReports/Proposal_Report_IT21219566.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
+            </div>
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fas fa-file-pdf fa-3x mb-4 text-rose-500"></i>
+                <h3 class="text-xl font-semibold text-white">Project Proposal - IT21229084</h3>
+                <p class="text-base mb-4">.....</p>
+                <a href="assets/pdfs/ProposalReports/Proposal_Report_IT21229084.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
             </div>
         </div>
-        <h3 class="text-2xl font-bold text-white mb-6 mt-8">Progress Presentations</h3>
+
+
+        <h3 class="text-2xl font-bold text-white mb-6 mt-8">Research Papers</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-file-pdf fa-3x mb-4 text-rose-500"></i>
-                <h3 class="text-xl font-semibold text-white">Progress Report-1</h3>
-                <p class="text-base mb-4">10 pages, details initial horn detection (90% accuracy).</p>
-                <a href="assets/pdfs/ProgressReports/24-25j-132_Progress_Report_1.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
+                <h3 class="text-xl font-semibold text-white">Research Paper 1</h3>
+                <p class="text-base mb-4">Real-Time Siren Detection and Haptic Alert System for Deaf Drivers Using Edge AI and IoT</p>
+                <a href="assets/pdfs/ResearchPapers/rp1.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
             </div>
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
+            
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-file-pdf fa-3x mb-4 text-rose-500"></i>
-                <h3 class="text-xl font-semibold text-white">Progress Report-2</h3>
-                <p class="text-base mb-4">12 pages, covers integrated system (93% accuracy).</p>
-                <a href="assets/pdfs/ProgressReports/24-25j-132_Progress_Report_2.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
+                <h3 class="text-xl font-semibold text-white">Research Paper 2</h3>
+                <p class="text-base mb-4">Real-Time Vehicle Horn Detection and Alert System for Deaf Drivers Using Machine Learning and IoT</p>
+                <a href="assets/pdfs/ResearchPapers/rp2.pdf" download target="_blank" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Download</a>
             </div>
+            
         </div>
+
+
+
+
+
+
+
+
+
+
+        
     </section>
 
     <!-- Slides Section -->
-    <section id="slides" class="py-12 px-4 md:px-12 bg-slate-900">
+    <section id="slides" class="py-12 px-4 md:px-12 bg-slate-900" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Slides</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-file-powerpoint fa-3x mb-4 text-amber-500"></i>
                 <h3 class="text-xl font-semibold text-white">Proposal Presentation</h3>
                 <p class="text-base"><a href="assets/pdfs/ProposalReports/Proposal-Presentation_24-25J-132.pptx" download target="_blank" class="text-teal-400 hover:underline">Download</a> (20 slides, outlines objectives and methodology).</p>
             </div>
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="300">
                 <i class="fas fa-file-powerpoint fa-3x mb-4 text-amber-500"></i>
                 <h3 class="text-xl font-semibold text-white">Progress Presentation-1</h3>
                 <p class="text-base"><a href="assets/pdfs/ProgressReports/Progress-Presentation-1_24-25J-132.pptx" download target="_blank" class="text-teal-400 hover:underline">Download</a> (15 slides, horn detection results).</p>
             </div>
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="400">
                 <i class="fas fa-file-powerpoint fa-3x mb-4 text-amber-500"></i>
                 <h3 class="text-xl font-semibold text-white">Progress Presentation-2</h3>
                 <p class="text-base"><a href="assets/pdfs/ProgressReports/Progress-Presentation-2_24-25J-132.pptx" download target="_blank" class="text-teal-400 hover:underline">Download</a> (18 slides, integrated system demo).</p>
             </div>
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="500">
                 <i class="fas fa-file-powerpoint fa-3x mb-4 text-amber-500"></i>
                 <h3 class="text-xl font-semibold text-white">Final Presentation</h3>
-                <p class="text-base"><a href="assets/pdfs/FinalReports/Final-Presentation_24-25J-132.pptx" download target="_blank" class="text-teal-400 hover:underline">Download</a> (25 slides, full system results).</p>
+                <p class="text-base"><a href="assets/pdfs/Final-Presentation-slide_24-25J-132.pdf" download target="_blank" class="text-teal-400 hover:underline">Download</a> (25 slides, full system results).</p>
             </div>
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
-                <i class="fas fa-file-powerpoint fa-3x mb-4 text-amber-500"></i>
-                <h3 class="text-xl font-semibold text-white">Viva Presentation</h3>
-                <p class="text-base"><a href="assets/pdfs/FinalReports/Viva-Presentation_24-25J-132.pptx" download target="_blank" class="text-teal-400 hover:underline">Download</a> (22 slides, defense and scalability).</p>
-            </div>
+            
         </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="py-12 px-4 md:px-12 bg-slate-800">
+    <section id="team" class="py-12 px-4 md:px-12 bg-slate-800" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Team</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
-                <img src="https://via.placeholder.com/150" alt="Rusith Fernando" class="w-full h-40 object-cover rounded-t-lg mb-4">
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="200">
+                <img src="assets/images/rusith.jpg" alt="Rusith Fernando" class="w-full h-40 object-cover rounded-t-lg mb-4">
                 <h3 class="text-xl font-semibold text-white">Rusith Fernando (IT21278280)</h3>
                 <p class="text-base mb-2">Lead Developer, coded 60% of CNNs and TDOA logic, led 20 AI training sessions.</p>
-                <a href="#" class="text-teal-400 hover:underline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/rusith-fernando-aaa77a215/" class="text-teal-400 hover:underline"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
-                <img src="https://via.placeholder.com/150" alt="Amal Perera" class="w-full h-40 object-cover rounded-t-lg mb-4">
-                <h3 class="text-xl font-semibold text-white">Amal Perera (IT21234567)</h3>
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+                <img src="assets/images/nirmala.jpg" alt="Nirmala Rathnayake" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                <h3 class="text-xl font-semibold text-white">Nirmala Rathnayake (IT21388316)</h3>
                 <p class="text-base mb-2">Hardware Lead, designed ESP32 sensor array, built 8 prototypes.</p>
-                <a href="#" class="text-teal-400 hover:underline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/nirmala-rathnayake-9067a0282/" class="text-teal-400 hover:underline"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
-                <img src="https://via.placeholder.com/150" alt="Nethmi Silva" class="w-full h-40 object-cover rounded-t-lg mb-4">
-                <h3 class="text-xl font-semibold text-white">Nethmi Silva (IT21298765)</h3>
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="400">
+                <img src="assets/images/malith.jpg" alt="Malith Iroshan" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                <h3 class="text-xl font-semibold text-white">Malith Iroshan (IT21229084)</h3>
                 <p class="text-base mb-2">AI Specialist, developed LipCam (10.8% WER), conducted 15 lipreading tests.</p>
-                <a href="#" class="text-teal-400 hover:underline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/malith-iroshan/" class="text-teal-400 hover:underline"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
-            <div class="card bg-slate-700 p-6 text-center rounded-lg">
-                <img src="https://via.placeholder.com/150" alt="Kavindu Wijesinghe" class="w-full h-40 object-cover rounded-t-lg mb-4">
-                <h3 class="text-xl font-semibold text-white">Kavindu Wijesinghe (IT21265432)</h3>
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="500">
+                <img src="assets/images/kulana.jpg" alt="Kulana Thathsara" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                <h3 class="text-xl font-semibold text-white">Kulana Thathsara (IT21219566)</h3>
                 <p class="text-base mb-2">Testing Lead, managed 50 urban trials, authored 10 test reports.</p>
-                <a href="#" class="text-teal-400 hover:underline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.linkedin.com/in/kulana-thathsara/" class="text-teal-400 hover:underline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="500">
+                <img src="assets/images/kapila.jpg" alt="Kapila Dissanayaka" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                <h3 class="text-xl font-semibold text-white">Dr. Kapila Dissanayaka</h3>
+                <p class="text-base mb-2"> Supervisor</p>
+                <a href="https://www.linkedin.com/in/kapila-d-dissanayaka/" class="text-teal-400 hover:underline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <div class="card bg-slate-700 p-6 text-center rounded-lg" data-aos="zoom-in" data-aos-delay="500">
+                <img src="assets/images/ishara.jpg" alt="Ishara Weerathunga" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                <h3 class="text-xl font-semibold text-white">Ms. Ishara Weerathunga</h3>
+                <p class="text-base mb-2">Co-Supervisor</p>
+                <a href="https://www.linkedin.com/in/ishara-weerathunga-05569aa2/" class="text-teal-400 hover:underline"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-12 px-4 md:px-12 bg-slate-900">
+    <section id="testimonials" class="py-12 px-4 md:px-12 bg-slate-900" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">What People Say</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div class="card bg-slate-700 p-6 rounded-lg">
+            <div class="card bg-slate-700 p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="200">
                 <p class="text-base italic mb-4">"This system transformed my driving experience, making Colombo’s chaotic roads feel safer and more accessible."</p>
-                <p class="text-sm font-semibold text-teal-400">– Chaminda Silva, Deaf Driver</p>
+                <p class="text-sm font-semibold text-teal-400">– Mr. Chaminda Silva, Deaf Driver</p>
             </div>
-            <div class="card bg-slate-700 p-6 rounded-lg">
+            <div class="card bg-slate-700 p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="300">
                 <p class="text-base italic mb-4">"The tactile alerts are intuitive, and the lipreading feature helps me communicate during emergencies."</p>
-                <p class="text-sm font-semibold text-teal-400">– Priya Fernando, Test Participant</p>
+                <p class="text-sm font-semibold text-teal-400">– Ms. Priya Fernando, Test Participant</p>
             </div>
-            <div class="card bg-slate-700 p-6 rounded-lg">
+            <div class="card bg-slate-700 p-6 rounded-lg" data-aos="zoom-in" data-aos-delay="400">
                 <p class="text-base italic mb-4">"A groundbreaking solution that bridges accessibility and technology for deaf drivers."</p>
-                <p class="text-sm font-semibold text-teal-400">– Dr. Anura Perera, SLIIT Supervisor</p>
+                <p class="text-sm font-semibold text-teal-400">– Mr. Ranmal Fernando, Test Participant</p>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-12 px-4 md:px-12 bg-slate-800">
+    <section id="faq" class="py-12 px-4 md:px-12 bg-slate-800" data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
         <div class="space-y-4 max-w-4xl mx-auto">
-            <div class="collapse collapse-arrow bg-slate-700 text-white">
+            <div class="collapse collapse-arrow bg-slate-700 text-white" data-aos="fade-left" data-aos-delay="200">
                 <input type="checkbox" id="faq1" />
                 <label for="faq1" class="collapse-title text-xl font-medium">How does the system detect horns?</label>
                 <div class="collapse-content text-slate-300 text-base">
                     <p>Using 4 MEMS microphones and CNNs, it achieves 94.2% accuracy with TDOA localization (8° precision) in 85 dB noise, validated in 500+ urban scenarios.</p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-slate-700 text-white">
+            <div class="collapse collapse-arrow bg-slate-700 text-white" data-aos="fade-left" data-aos-delay="300">
                 <input type="checkbox" id="faq2" />
                 <label for="faq2" class="collapse-title text-xl font-medium">What is LipCam, and how does it work?</label>
                 <div class="collapse-content text-slate-300 text-base">
                     <p>LipCam uses LSTM models to read lips with 10.8% WER, effective in 20–100 lux lighting and 30° head movements, tested with 5,000 videos.</p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-slate-700 text-white">
+            <div class="collapse collapse-arrow bg-slate-700 text-white" data-aos="fade-left" data-aos-delay="400">
                 <input type="checkbox" id="faq3" />
                 <label for="faq3" class="collapse-title text-xl font-medium">Is the system affordable for widespread use?</label>
                 <div class="collapse-content text-slate-300 text-base">
                     <p>Built with $50 ESP32 hardware and scalable IoT, it’s designed for low-cost deployment, targeting Sri Lanka’s 400,000+ deaf community.</p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-slate-700 text-white">
+            <div class="collapse collapse-arrow bg-slate-700 text-white" data-aos="fade-left" data-aos-delay="500">
                 <input type="checkbox" id="faq4" />
                 <label for="faq4" class="collapse-title text-xl font-medium">How was the system tested?</label>
                 <div class="collapse-content text-slate-300 text-base">
@@ -562,41 +931,220 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-12 px-4 md:px-12 bg-slate-900">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Contact</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div class="card bg-slate-700 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold text-white mb-4">Get in Touch</h3>
-                <input type="email" id="email-input" placeholder="Enter email" class="w-full p-2 bg-slate-600 text-white rounded-md mb-2">
-                <p class="text-sm mb-3">We'll never share your email with anyone else.</p>
-                <input type="text" id="inquiry-input" placeholder="Your inquiry" class="w-full p-2 bg-slate-600 text-white rounded-md mb-2">
-                <button class="bg-indigo-600 text-white p-2 rounded-md w-full hover:bg-indigo-700 transition-colors">Submit</button>
+<!-- Contact Section -->
+<section id="contact" class="py-16 px-4 md:px-12 bg-slate-900" data-aos="fade-up" data-aos-delay="100">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Contact Us</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Contact Form -->
+            <div class="card bg-slate-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow" data-aos="zoom-in" data-aos-delay="200">
+                <h3 class="text-2xl font-semibold text-white mb-6 flex items-center">
+                    <i class="fas fa-paper-plane mr-3 text-indigo-400"></i>Send a Message
+                </h3>
+                <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-slate-300 mb-1">Your Name</label>
+                        <input type="text" id="name" name="name" required 
+                               class="w-full p-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-300 mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" required 
+                               class="w-full p-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-300 mb-1">Your Message</label>
+                        <textarea id="message" name="message" rows="4" required 
+                                  class="w-full p-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"></textarea>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2"></i> Send Message
+                    </button>
+                    <div id="form-status" class="text-center text-sm mt-2"></div>
+                </form>
             </div>
-            <div class="card bg-slate-700 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold text-white mb-4">Contact Info</h3>
-                <p class="text-base"><i class="fas fa-envelope mr-2"></i> group24-25j-132@sliit.lk</p>
-                <p class="text-base"><i class="fas fa-phone mr-2"></i> +94 11 754 4801</p>
-                <p class="text-base"><i class="fas fa-map-marker-alt mr-2"></i> SLIIT, Malabe, Sri Lanka</p>
+
+            <!-- Contact Info -->
+            <div class="card bg-slate-800 p-8 rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+                <h3 class="text-2xl font-semibold text-white mb-6 flex items-center">
+                    <i class="fas fa-address-card mr-3 text-indigo-400"></i>Contact Info
+                </h3>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-envelope mt-1 mr-4 text-indigo-400"></i>
+                        <div>
+                            <h4 class="text-sm font-medium text-slate-400">Email</h4>
+                            <a href="mailto:group24-25j-132@sliit.lk" class="text-white hover:text-indigo-400 transition-colors">group24-25j-132@sliit.lk</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-phone mt-1 mr-4 text-indigo-400"></i>
+                        <div>
+                            <h4 class="text-sm font-medium text-slate-400">Phone</h4>
+                            <a href="tel:+94117544801" class="text-white hover:text-indigo-400 transition-colors">+94 11 754 4801</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-4 text-indigo-400"></i>
+                        <div>
+                            <h4 class="text-sm font-medium text-slate-400">Address</h4>
+                            <p class="text-white">SLIIT, Malabe, Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="text-lg font-medium text-white mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-indigo-600 flex items-center justify-center transition-colors">
+                            <i class="fab fa-github text-white"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="card bg-slate-700 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold text-white mb-4">Newsletter</h3>
-                <p class="text-base mb-2">Subscribe for project updates.</p>
-                <input type="email" placeholder="Your email" class="w-full p-2 bg-slate-600 text-white rounded-md mb-2">
-                <button class="bg-indigo-600 text-white p-2 rounded-md w-full hover:bg-indigo-700 transition-colors">Subscribe</button>
+
+            <!-- Newsletter -->
+            <div class="card bg-slate-800 p-8 rounded-xl shadow-lg" data-aos="zoom-in" data-aos-delay="400">
+                <h3 class="text-2xl font-semibold text-white mb-6 flex items-center">
+                    <i class="fas fa-newspaper mr-3 text-indigo-400"></i>Newsletter
+                </h3>
+                <p class="text-slate-300 mb-6">Subscribe to our newsletter to get updates about our project and community activities.</p>
+                <form id="newsletter-form" class="space-y-4">
+                    <div>
+                        <label for="newsletter-email" class="block text-sm font-medium text-slate-300 mb-1">Email Address</label>
+                        <input type="email" id="newsletter-email" required 
+                               class="w-full p-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center">
+                        <i class="fas fa-envelope mr-2"></i> Subscribe
+                    </button>
+                    <div id="newsletter-status" class="text-center text-sm mt-2"></div>
+                </form>
+                <div class="mt-6 pt-6 border-t border-slate-700">
+                    <h4 class="text-lg font-medium text-white mb-3">Project Updates</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-400 mr-2 mt-1"></i>
+                            <span class="text-slate-300">Weekly progress reports</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-400 mr-2 mt-1"></i>
+                            <span class="text-slate-300">Event announcements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-400 mr-2 mt-1"></i>
+                            <span class="text-slate-300">Exclusive content</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<script>
+    // Handle contact form submission
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.innerHTML;
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+        submitButton.disabled = true;
+        
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                formStatus.textContent = 'Thank you! Your message has been sent.';
+                formStatus.className = 'text-center text-sm mt-2 text-green-400';
+                contactForm.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            formStatus.textContent = 'Oops! There was a problem sending your message. Please try again.';
+            formStatus.className = 'text-center text-sm mt-2 text-red-400';
+            console.error('Error:', error);
+        } finally {
+            submitButton.innerHTML = originalButtonText;
+            submitButton.disabled = false;
+            
+            // Clear status message after 5 seconds
+            setTimeout(() => {
+                formStatus.textContent = '';
+            }, 5000);
+        }
+    });
+    
+    // Handle newsletter form submission (example - would need your own backend)
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterStatus = document.getElementById('newsletter-status');
+    
+    newsletterForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitButton = newsletterForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.innerHTML;
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Subscribing...';
+        submitButton.disabled = true;
+        
+        // Simulate API call
+        setTimeout(() => {
+            newsletterStatus.textContent = 'Thank you for subscribing to our newsletter!';
+            newsletterStatus.className = 'text-center text-sm mt-2 text-green-400';
+            newsletterForm.reset();
+            
+            submitButton.innerHTML = originalButtonText;
+            submitButton.disabled = false;
+            
+            // Clear status message after 5 seconds
+            setTimeout(() => {
+                newsletterStatus.textContent = '';
+            }, 5000);
+        }, 1500);
+    });
+</script>
 
     <!-- Back to Top Button -->
     <button class="back-to-top fixed bottom-4 right-4 p-4 bg-indigo-600 text-white rounded-full shadow-lg hover:bg-indigo-700 transition-all hidden" onclick="scrollToTop()">↑</button>
 
     <!-- Footer -->
-    <footer class="py-6 bg-indigo-800 text-center text-slate-300">
+    <footer class="py-6 bg-indigo-800 text-center text-slate-300" data-aos="fade-up" data-aos-delay="100">
         <p>© 2025 Group 24-25J-132, SLIIT. All rights reserved.</p>
     </footer>
 
+    <!-- AOS.js Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- JavaScript -->
     <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
         // Scroll to Top
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -630,6 +1178,26 @@
                     content.style.display = content.style.display === 'block' ? 'none' : 'block';
                 }
             });
+        });
+
+        // Modal logic for milestones
+        document.querySelectorAll('.tooltip-icon').forEach(icon => {
+            icon.addEventListener('click', () => {
+                const modal = document.getElementById('milestone-modal');
+                document.getElementById('modal-title').innerText = icon.dataset.title;
+                document.getElementById('modal-description').innerText = icon.dataset.description;
+                modal.classList.remove('hidden');
+            });
+        });
+
+        document.getElementById('close-modal').addEventListener('click', () => {
+            document.getElementById('milestone-modal').classList.add('hidden');
+        });
+
+        document.getElementById('milestone-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'milestone-modal') {
+                e.target.classList.add('hidden');
+            }
         });
     </script>
 </body>
